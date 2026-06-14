@@ -83,6 +83,11 @@
     /* Values reuse pillars-grid; add a 2-row helper */
     .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
+    /* Leadership row with 4 members */
+    .team-grid-4 { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 1024px) { .team-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .team-grid-4 { grid-template-columns: 1fr; } }
+
     @media (max-width: 1024px) {
       .process-grid { grid-template-columns: repeat(2, 1fr); }
       .values-grid { grid-template-columns: repeat(2, 1fr); }
@@ -168,7 +173,7 @@
       </div>
 
       <h3 class="team-subhead">Leadership &amp; Strategy</h3>
-      <div class="team-grid">
+      <div class="team-grid team-grid-4">
         <div class="team-card">
           <img src="img/wp/Frame-14.png" alt="Athif Shaffy">
           <h3>Athif Shaffy</h3>
@@ -198,6 +203,13 @@
           <div class="team-social">
             <a href="https://www.linkedin.com/in/dhamanes7/" target="_blank" rel="noopener" aria-label="Shubham Dhamane on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
+        </div>
+        <div class="team-card">
+          <img src="img/steffen.jpg" alt="Prof. Dr. Steffen Moritz">
+          <h3>Prof. Dr. Steffen Moritz</h3>
+          <p class="role">Lead Scientific Advisor</p>
+          <p class="location">Hamburg, Germany</p>
+          <p class="team-bio">Head of the Clinical Neuropsychology Working Group in the Department of Psychiatry and Psychotherapy at the University Medical Center Hamburg-Eppendorf (UKE), and Professor of Clinical Psychology. As a lead advisor to The Alpha Nova, Prof. Moritz collaborated with our team on the COGITO platform, bringing world-class clinical research expertise to our healthcare and AI work.</p>
         </div>
       </div>
 
