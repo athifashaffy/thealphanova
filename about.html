@@ -34,6 +34,67 @@
     gtag('js', new Date());
     gtag('config', 'G-KQY5692DSS');
   </script>
+
+  <!-- About page — page-scoped enhancements (keeps shared css/style.css untouched) -->
+  <style>
+    /* Story */
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .story-img { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .story-img img { width: 100%; height: 440px; object-fit: cover; }
+    .story-text p { color: var(--secondary-text); line-height: 1.85; margin-bottom: 16px; font-size: 16px; }
+    .story-text h2 { font-size: 34px; margin-bottom: 18px; }
+
+    /* Process steps */
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .process-step { background: var(--white); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 32px 24px; transition: all var(--transition); }
+    .process-step:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: transparent; }
+    .process-step .num { font-family: var(--font-heading); font-weight: 800; font-size: 34px; color: var(--accent); opacity: 0.35; margin-bottom: 12px; }
+    .process-step h3 { font-size: 17px; margin-bottom: 8px; }
+    .process-step p { font-size: 14px; color: var(--light-gray); line-height: 1.6; }
+
+    /* Locations */
+    .loc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .loc-card { background: var(--white); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 36px 28px; text-align: center; transition: all var(--transition); }
+    .loc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: transparent; }
+    .loc-flag { font-size: 40px; margin-bottom: 14px; }
+    .loc-card h3 { font-size: 19px; margin-bottom: 4px; }
+    .loc-card .loc-role { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+    .loc-card p { font-size: 14px; color: var(--light-gray); line-height: 1.6; }
+
+    /* Team card enhancements */
+    .team-card .team-bio { font-size: 13.5px; color: var(--light-gray); line-height: 1.65; margin-top: 12px; }
+    .team-avatar {
+      width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-heading); font-weight: 800; font-size: 34px; color: #fff;
+      background: linear-gradient(135deg, #384fa2, #5b78d6);
+    }
+    .team-social { margin-top: 16px; display: flex; justify-content: center; gap: 10px; }
+    .team-social a {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--light-bg); border: 1px solid var(--border-light);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 15px; transition: all var(--transition);
+    }
+    .team-social a:hover { background: var(--accent); color: #fff; transform: translateY(-2px); }
+    .team-subhead { text-align: center; font-family: var(--font-heading); font-weight: 700; font-size: 22px; color: var(--heading-color); margin: 8px 0 32px; }
+    .team-subhead:not(:first-of-type) { margin-top: 56px; }
+
+    /* Values reuse pillars-grid; add a 2-row helper */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+    @media (max-width: 1024px) {
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .story-grid { grid-template-columns: 1fr; gap: 32px; }
+      .story-img img { height: 300px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .loc-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -48,6 +109,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="/case-studies">Case Studies</a></li>
           <li><a href="/about" class="active">About Us</a></li>
+          <li><a href="/labs">AN Labs</a></li>
           <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
         </ul>
       </nav>
@@ -96,12 +158,31 @@
     </div>
   </section>
 
-  <!-- Key Metrics -->
+  <!-- Our Story -->
   <section class="section section-alt">
+    <div class="container">
+      <div class="story-grid scroll-reveal">
+        <div class="story-text">
+          <span class="section-label">Our Story</span>
+          <h2>From a Shared Idea to a Global Team</h2>
+          <p>The Alpha Nova began with a simple conviction: that great software should be accessible, dependable, and genuinely useful. What started as a small group of engineers and builders has grown into a tri-continental company united by a single standard — get stuff done, and get it done well.</p>
+          <p>Headquartered in Greater Sudbury, Ontario, with teams in Hamburg, Germany and Colombo, Sri Lanka, we've delivered products across healthcare, aviation, mining, education, transportation, and enterprise. From an award-winning AI model for open-pit mining analysis to a gamified mental-health platform built with a leading university hospital, our work spans industries — but the approach never changes.</p>
+          <p>We treat every engagement as our own product. We obsess over the details, communicate openly, and measure ourselves by the impact we create for our clients. That's how a shared idea became a team that companies around the world trust to build what matters.</p>
+        </div>
+        <div class="story-img">
+          <img src="img/wp/INTRODUCING-The-AlphanovA-6-1024x576.jpg" alt="The Alpha Nova Story">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics -->
+  <section class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-label">By The Numbers</span>
         <h2>Our Impact</h2>
+        <p>A track record built on delivery, partnership, and measurable results.</p>
       </div>
       <div class="metrics-grid">
         <div class="metric-item">
@@ -114,7 +195,126 @@
         </div>
         <div class="metric-item">
           <h3><span data-count="98" data-suffix="%">0%</span></h3>
-          <p>Client Connection</p>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do / Expertise -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Expertise</span>
+        <h2>What We Do Best</h2>
+        <p>A full spectrum of software capability, delivered end to end by one accountable team.</p>
+      </div>
+      <div class="cs-features-grid scroll-reveal" style="max-width: 980px; margin: 0 auto;">
+        <div class="cs-feature-card">
+          <div class="cs-feature-icon"><i class="fas fa-mobile-screen-button"></i></div>
+          <h4>Mobile App Development</h4>
+          <p>Native and cross-platform apps for iOS and Android, engineered for performance, polish, and scale.</p>
+        </div>
+        <div class="cs-feature-card">
+          <div class="cs-feature-icon"><i class="fas fa-code"></i></div>
+          <h4>Web Development</h4>
+          <p>Fast, secure, and responsive web applications — from marketing sites to complex SaaS platforms.</p>
+        </div>
+        <div class="cs-feature-card">
+          <div class="cs-feature-icon"><i class="fas fa-brain"></i></div>
+          <h4>AI &amp; Analytical Solutions</h4>
+          <p>Computer vision, machine learning, and data pipelines that turn raw information into real decisions.</p>
+        </div>
+        <div class="cs-feature-card">
+          <div class="cs-feature-icon"><i class="fas fa-database"></i></div>
+          <h4>Database Engineering</h4>
+          <p>Robust data architecture and optimization for systems that stay fast and reliable as they grow.</p>
+        </div>
+        <div class="cs-feature-card">
+          <div class="cs-feature-icon"><i class="fas fa-pen-ruler"></i></div>
+          <h4>Product &amp; UI/UX Design</h4>
+          <p>Research-driven design that makes complex products feel effortless to use.</p>
+        </div>
+        <div class="cs-feature-card">
+          <div class="cs-feature-icon"><i class="fas fa-gears"></i></div>
+          <h4>Custom Software Development</h4>
+          <p>Tailored systems built around your exact workflow — never one-size-fits-all templates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Stand For</span>
+        <h2>Our Core Values</h2>
+        <p>The principles that guide how we build, collaborate, and deliver.</p>
+      </div>
+      <div class="values-grid scroll-reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon blue"><i class="fas fa-handshake"></i></div>
+          <h3>Transparency</h3>
+          <p>Honest communication and clear progress at every stage. No surprises, no jargon — just straight answers.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon orange"><i class="fas fa-award"></i></div>
+          <h3>Ownership</h3>
+          <p>We treat every project as our own product, taking full responsibility for outcomes, not just output.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon green"><i class="fas fa-bolt"></i></div>
+          <h3>Excellence</h3>
+          <p>We sweat the details and hold a high bar for craft, quality, and reliability in everything we ship.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon amber"><i class="fas fa-lightbulb"></i></div>
+          <h3>Innovation</h3>
+          <p>We embrace new technology with purpose, applying it where it creates genuine, measurable value.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon blue"><i class="fas fa-people-group"></i></div>
+          <h3>Collaboration</h3>
+          <p>Cross-functional teams across three continents working as one toward a shared goal.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon green"><i class="fas fa-bullseye"></i></div>
+          <h3>Impact</h3>
+          <p>We measure success by the real-world results we create for our clients and their users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">How We Work</span>
+        <h2>Our Process</h2>
+        <p>A proven methodology that keeps projects on time, on budget, and beyond expectations.</p>
+      </div>
+      <div class="process-grid scroll-reveal">
+        <div class="process-step">
+          <div class="num">01</div>
+          <h3>Discover</h3>
+          <p>We dig into your goals, users, and constraints to define the problem before writing a single line of code.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">02</div>
+          <h3>Design</h3>
+          <p>We shape the experience and architecture — prototyping, validating, and planning for scale from day one.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">03</div>
+          <h3>Build</h3>
+          <p>Agile development with regular milestones, transparent updates, and quality baked in at every step.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">04</div>
+          <h3>Deliver &amp; Support</h3>
+          <p>We launch, measure, and keep improving — staying a long-term partner well beyond go-live.</p>
         </div>
       </div>
     </div>
@@ -145,31 +345,89 @@
         <h2>The People Behind the Products</h2>
         <p>A diverse, passionate team working across three continents to bring your vision to life.</p>
       </div>
+
+      <h3 class="team-subhead">Leadership &amp; Strategy</h3>
       <div class="team-grid">
-        <div class="team-card">
-          <img src="img/wp/Frame-17.png" alt="Dr. Markus Lehmann">
-          <h3>Dr. Markus Lehmann</h3>
-          <p class="role">Strategic Advisor</p>
-          <p class="location">Passau, Germany</p>
-        </div>
         <div class="team-card">
           <img src="img/wp/Frame-14.png" alt="Athif Shaffy">
           <h3>Athif Shaffy</h3>
-          <p class="role">Founder & CEO</p>
+          <p class="role">Founder &amp; CEO</p>
           <p class="location">Sudbury, Canada</p>
+          <p class="team-bio">Athif founded The Alpha Nova to build software that genuinely gets stuff done. He leads company strategy, client partnerships, and product vision across all three offices.</p>
         </div>
         <div class="team-card">
           <img src="img/wp/Frame-15.png" alt="Shubham Dhamane">
           <h3>Shubham Dhamane</h3>
           <p class="role">Co-Founder / Senior Business Analyst</p>
           <p class="location">Sudbury, Canada</p>
+          <p class="team-bio">Shubham bridges business and engineering — translating client goals into clear requirements and making sure every product delivers measurable value.</p>
+        </div>
+        <div class="team-card">
+          <img src="img/wp/Frame-17.png" alt="Dr. Markus Lehmann">
+          <h3>Dr. Markus Lehmann</h3>
+          <p class="role">Strategic Advisor</p>
+          <p class="location">Passau, Germany</p>
+          <p class="team-bio">Markus advises on technology strategy and enterprise architecture, bringing deep industry experience to our most complex engagements.</p>
+        </div>
+      </div>
+
+      <h3 class="team-subhead">Engineering</h3>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">ES</div>
+          <h3>Ertugrul Sahin</h3>
+          <p class="role">Senior Software Developer</p>
+          <p class="team-bio">Ertugrul leads complex feature development and system architecture at The Alpha Nova, building robust, scalable backends and helping guide engineering quality across the team.</p>
+          <div class="team-social">
+            <a href="https://www.linkedin.com/in/ertugrul-sahin-502911155/" target="_blank" rel="noopener" aria-label="Ertugrul Sahin on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">LK</div>
+          <h3>Laxman KC</h3>
+          <p class="role">Software Developer</p>
+          <p class="team-bio">Laxman develops and ships features across web and mobile products, turning designs and requirements into reliable, well-tested code that performs in production.</p>
+          <div class="team-social">
+            <a href="https://www.linkedin.com/in/laxmankc/" target="_blank" rel="noopener" aria-label="Laxman KC on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Where We Are</span>
+        <h2>One Team, Three Continents</h2>
+        <p>Local presence and global reach — delivering round-the-clock with real market understanding.</p>
+      </div>
+      <div class="loc-grid scroll-reveal">
+        <div class="loc-card">
+          <div class="loc-flag">&#127464;&#127462;</div>
+          <h3>Greater Sudbury</h3>
+          <p class="loc-role">Canada &mdash; Headquarters</p>
+          <p>1545 Maley Drive, Greater Sudbury, Ontario. The hub for our North American operations.</p>
+        </div>
+        <div class="loc-card">
+          <div class="loc-flag">&#127465;&#127466;</div>
+          <h3>Hamburg</h3>
+          <p class="loc-role">Germany &mdash; Engineering &amp; Strategy</p>
+          <p>Our European base, anchoring research partnerships and enterprise engagements.</p>
+        </div>
+        <div class="loc-card">
+          <div class="loc-flag">&#127473;&#127472;</div>
+          <h3>Colombo</h3>
+          <p class="loc-role">Sri Lanka &mdash; Development</p>
+          <p>A core development center extending our delivery capacity across time zones.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="cta-block">
         <img src="img/wp/Markus-v5.jpg" alt="Dr. Markus Lehmann">
@@ -210,6 +468,7 @@
           <h4>Company</h4>
           <ul class="footer-links">
             <li><a href="/about">About Us</a></li>
+            <li><a href="/labs">AN Labs</a></li>
             <li><a href="/case-studies">Case Studies</a></li>
             <li><a href="/#contact">Contact</a></li>
           </ul>
