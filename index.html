@@ -26,6 +26,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .labs-promo { grid-template-columns: 1.4fr 1fr; }
+    .labs-promo-chip { display:flex; align-items:center; gap:10px; padding:14px 18px; border-radius:12px; background:rgba(255,255,255,0.04); border:1px solid rgba(168,184,232,0.18); color:#c4cee0; font-size:14px; font-weight:600; }
+    .labs-promo-chip i { color:#8ea6ee; }
+    @media (max-width:768px) {
+      .labs-promo { grid-template-columns:1fr !important; padding:36px 24px !important; gap:28px !important; }
+    }
+  </style>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
@@ -360,6 +368,25 @@
             <p>AI-powered fall detection without wearables. Safety in every stumble.</p>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AN Labs Promo -->
+  <section class="section">
+    <div class="container">
+      <div class="labs-promo" style="position:relative; overflow:hidden; border-radius:24px; background:radial-gradient(800px 420px at 88% -25%, rgba(91,120,214,0.28), transparent 60%), linear-gradient(135deg,#0e1526,#0a0f1c); border:1px solid rgba(168,184,232,0.22); padding:56px; display:grid; gap:44px; align-items:center;">
+        <div>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:7px 16px; border-radius:100px; background:rgba(91,120,214,0.14); border:1px solid rgba(168,184,232,0.28); color:#a8b8e8; font-size:12.5px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase;">&#127464;&#127462; Our R&amp;D Division</span>
+          <h2 style="color:#fff; font-size:34px; font-weight:800; letter-spacing:-0.5px; margin:18px 0 14px;">Introducing The Alpha Nova Labs</h2>
+          <p style="color:#c4cee0; font-size:16px; line-height:1.7; max-width:540px;">Our Canadian-based research and development division &mdash; advancing autonomous systems, computer vision, and real-time edge intelligence to solve high-stakes industrial and security challenges.</p>
+          <a href="/labs" class="btn btn-primary" style="margin-top:26px;">Explore AN Labs <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div class="labs-promo-chip"><i class="fas fa-satellite-dish"></i> Autonomous Systems &amp; Signal Processing</div>
+          <div class="labs-promo-chip"><i class="fas fa-cube"></i> Spatial AI &amp; Computer Vision</div>
+          <div class="labs-promo-chip"><i class="fas fa-wave-square"></i> Telemetry &amp; Predictive Analytics</div>
+        </div>
       </div>
     </div>
   </section>
