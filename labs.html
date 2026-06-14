@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AN Labs | Sovereign R&D — Autonomous Systems & Edge Intelligence | The Alpha Nova</title>
+  <meta name="description" content="The Alpha Nova Labs (AN Labs) is the Canadian-based research and development division of The Alpha Nova, advancing autonomous systems, computer vision, and real-time edge intelligence for high-stakes industrial and security applications.">
+  <meta name="keywords" content="sovereign technology Canada, Canadian defence software, autonomous systems Canada, computer vision R&D, edge intelligence, mmWave radar tracking, defence procurement Canada, Northern Ontario R&D, AN Labs">
+  <meta name="author" content="The Alpha Nova">
+  <link rel="canonical" href="https://thealphanova.com/labs">
+  <!-- Open Graph -->
+  <meta property="og:title" content="AN Labs — Sovereign R&D | The Alpha Nova">
+  <meta property="og:description" content="The Canadian-based advanced engineering and rapid prototyping division of The Alpha Nova. Autonomous systems, spatial AI, and real-time edge intelligence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thealphanova.com/labs">
+  <meta property="og:image" content="https://thealphanova.com/img/cote-gold-winners.jpg">
+  <meta property="og:site_name" content="The Alpha Nova">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AN Labs — Sovereign R&D | The Alpha Nova">
+  <meta name="twitter:description" content="The Canadian-based R&D division of The Alpha Nova. Autonomous systems, spatial AI, and real-time edge intelligence.">
+  <meta name="twitter:image" content="https://thealphanova.com/img/cote-gold-winners.jpg">
+  <link rel="icon" href="img/wp/cropped-fav-32x32.jpg" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Alpha Nova Labs",
+    "alternateName": "AN Labs",
+    "url": "https://thealphanova.com/labs",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "The Alpha Nova",
+      "url": "https://thealphanova.com"
+    },
+    "logo": "https://thealphanova.com/img/wp/tan-e1764091769895.png",
+    "description": "The Canadian-based research and development division of The Alpha Nova, advancing autonomous systems, computer vision, and real-time edge intelligence for high-stakes industrial and security applications.",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Greater Sudbury, Ontario, Canada"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1545 Maley Drive",
+      "addressLocality": "Greater Sudbury",
+      "addressRegion": "ON",
+      "postalCode": "P3A 4R7",
+      "addressCountry": "CA"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Canada"
+    },
+    "email": "info@thealphanova.com",
+    "telephone": "+1-437-424-5384",
+    "knowsAbout": [
+      "Autonomous Systems",
+      "Signal Processing",
+      "Computer Vision",
+      "Edge Intelligence",
+      "Sensor Fusion",
+      "Predictive Analytics"
+    ]
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQY5692DSS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KQY5692DSS');
+  </script>
+
+  <!-- ========================================
+       AN Labs — page-scoped styles
+       (kept here so shared css/style.css stays
+        an exact mirror of the main site)
+       ======================================== -->
+  <style>
+    :root {
+      --labs-bg: #0a0f1c;
+      --labs-bg-2: #0e1526;
+      --labs-panel: #121a2e;
+      --labs-border: rgba(255,255,255,0.09);
+      --labs-border-strong: rgba(168,184,232,0.28);
+      --labs-text: #c4cee0;
+      --labs-text-dim: #8995ad;
+      --labs-accent: #5b78d6;
+      --labs-accent-soft: #a8b8e8;
+      --labs-green: #34d399;
+      --labs-grid: rgba(122,143,204,0.07);
+    }
+
+    /* Page-wide dark canvas for the Labs micro-site */
+    body.labs { background: var(--labs-bg); color: var(--labs-text); }
+
+    /* Header tuned for dark background */
+    body.labs .header .container {
+      background: rgba(12, 18, 33, 0.7);
+      border: 1px solid var(--labs-border);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.45);
+    }
+    body.labs .header.scrolled .container {
+      background: rgba(12, 18, 33, 0.92);
+      border-color: var(--labs-border-strong);
+    }
+    body.labs .nav-links a { color: var(--labs-text-dim); }
+    body.labs .nav-links a:hover,
+    body.labs .nav-links a.active { color: #fff; }
+    body.labs .nav-links a.active::after { background: var(--labs-accent-soft); }
+    body.labs .logo img { filter: brightness(0) invert(1); }
+    body.labs .mobile-menu-btn span { background: #fff; }
+    body.labs .nav-links.open { background: rgba(12,18,33,0.97); }
+
+    .labs-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 16px; border-radius: 100px;
+      background: rgba(91,120,214,0.12);
+      border: 1px solid var(--labs-border-strong);
+      color: var(--labs-accent-soft);
+      font-size: 12.5px; font-weight: 600;
+      letter-spacing: 0.5px; text-transform: uppercase;
+    }
+    .labs-badge .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--labs-green);
+      box-shadow: 0 0 0 0 rgba(52,211,153,0.6);
+      animation: labs-pulse 2.2s infinite;
+    }
+    @keyframes labs-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(52,211,153,0.5); }
+      70% { box-shadow: 0 0 0 8px rgba(52,211,153,0); }
+      100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+    }
+
+    /* Hero */
+    .labs-hero {
+      position: relative;
+      padding: 180px 0 110px;
+      margin-top: 72px;
+      overflow: hidden;
+      background:
+        radial-gradient(900px 480px at 78% -8%, rgba(91,120,214,0.20), transparent 60%),
+        linear-gradient(180deg, var(--labs-bg-2), var(--labs-bg));
+    }
+    .labs-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--labs-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--labs-grid) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: radial-gradient(circle at 70% 25%, black, transparent 75%);
+      -webkit-mask-image: radial-gradient(circle at 70% 25%, black, transparent 75%);
+      pointer-events: none;
+    }
+    .labs-hero .container { position: relative; z-index: 1; }
+    .labs-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px; align-items: center;
+    }
+    .labs-eyebrow {
+      display: inline-block; margin: 22px 0 18px;
+      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--labs-accent-soft);
+    }
+    .labs-hero h1 {
+      font-size: 52px; font-weight: 800; line-height: 1.08;
+      letter-spacing: -1.5px; color: #fff; margin-bottom: 22px;
+    }
+    .labs-hero h1 .grad {
+      background: linear-gradient(90deg, #8ea6ee, #5b78d6);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .labs-hero p {
+      font-size: 18px; line-height: 1.75; color: var(--labs-text);
+      max-width: 560px; margin-bottom: 34px;
+    }
+    .labs-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .labs-btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 100px;
+      font-weight: 600; font-size: 15px; cursor: pointer;
+      font-family: var(--font-primary); transition: all var(--transition);
+      border: 1px solid transparent;
+    }
+    .labs-btn-primary { background: var(--labs-accent); color: #fff; }
+    .labs-btn-primary:hover { background: #6f89e0; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(91,120,214,0.35); }
+    .labs-btn-ghost { background: transparent; color: var(--labs-accent-soft); border-color: var(--labs-border-strong); }
+    .labs-btn-ghost:hover { background: rgba(91,120,214,0.12); transform: translateY(-2px); }
+
+    /* Hero stat rail */
+    .labs-hero-rail {
+      display: flex; gap: 34px; margin-top: 44px;
+      padding-top: 30px; border-top: 1px solid var(--labs-border);
+    }
+    .labs-hero-rail .item strong {
+      display: block; font-family: var(--font-heading);
+      font-size: 28px; font-weight: 800; color: #fff;
+    }
+    .labs-hero-rail .item span { font-size: 13px; color: var(--labs-text-dim); }
+
+    /* Section scaffolding (dark) */
+    .labs-section { padding: 96px 0; position: relative; }
+    .labs-section.alt { background: var(--labs-bg-2); }
+    .labs-head { max-width: 680px; margin: 0 auto 56px; text-align: center; }
+    .labs-head .tag {
+      display: inline-block; font-size: 13px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--labs-accent-soft); margin-bottom: 14px;
+    }
+    .labs-head h2 { font-size: 38px; font-weight: 800; color: #fff; letter-spacing: -0.5px; margin-bottom: 14px; }
+    .labs-head p { font-size: 17px; line-height: 1.7; color: var(--labs-text-dim); }
+
+    /* Research vector cards */
+    .labs-vectors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .vector-card {
+      background: linear-gradient(180deg, var(--labs-panel), rgba(18,26,46,0.55));
+      border: 1px solid var(--labs-border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px; transition: all var(--transition);
+    }
+    .vector-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--labs-border-strong);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .vector-icon {
+      width: 52px; height: 52px; border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 20px;
+      background: rgba(91,120,214,0.14); color: var(--labs-accent-soft);
+      border: 1px solid var(--labs-border-strong);
+    }
+    .vector-card h3 { font-size: 19px; color: #fff; margin-bottom: 12px; }
+    .vector-card .tech {
+      font-size: 13px; color: var(--labs-accent-soft); font-weight: 600;
+      margin-bottom: 14px; line-height: 1.6;
+    }
+    .vector-card p { font-size: 14.5px; color: var(--labs-text-dim); line-height: 1.7; }
+    .vector-card .vector-app {
+      margin-top: 16px; padding-top: 16px;
+      border-top: 1px solid var(--labs-border);
+      font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--labs-text-dim);
+    }
+
+    /* Visual Performance Indicator panel */
+    .vpi-wrap {
+      display: grid; grid-template-columns: 1.5fr 1fr; gap: 0;
+      background: var(--labs-panel);
+      border: 1px solid var(--labs-border-strong);
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    }
+    .vpi-stage { position: relative; background: #070b15; min-height: 360px; }
+    .vpi-stage canvas { display: block; width: 100%; height: 100%; }
+    .vpi-overlay {
+      position: absolute; top: 16px; left: 18px;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--labs-text-dim); font-weight: 600;
+    }
+    .vpi-lock {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 12px; border-radius: 100px;
+      background: rgba(52,211,153,0.12); color: var(--labs-green);
+      border: 1px solid rgba(52,211,153,0.35);
+    }
+    .vpi-lock.warn { background: rgba(245,158,11,0.12); color: #f5b133; border-color: rgba(245,158,11,0.4); }
+    .vpi-lock .blip { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: labs-pulse 1.6s infinite; }
+
+    .vpi-panel { padding: 30px; display: flex; flex-direction: column; }
+    .vpi-panel h3 { font-size: 20px; color: #fff; margin-bottom: 8px; }
+    .vpi-panel > p { font-size: 14px; color: var(--labs-text-dim); line-height: 1.65; margin-bottom: 24px; }
+    .vpi-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+    .vpi-metric {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--labs-border);
+      border-radius: var(--radius-md); padding: 16px;
+    }
+    .vpi-metric .v { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: #fff; }
+    .vpi-metric .v.good { color: var(--labs-green); }
+    .vpi-metric .k { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--labs-text-dim); margin-top: 2px; }
+    .vpi-control label {
+      display: flex; justify-content: space-between;
+      font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--labs-text-dim); margin-bottom: 10px;
+    }
+    .vpi-control input[type=range] {
+      width: 100%; -webkit-appearance: none; appearance: none;
+      height: 4px; border-radius: 4px; background: var(--labs-border-strong);
+      outline: none; margin-bottom: 18px;
+    }
+    .vpi-control input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--labs-accent-soft); cursor: pointer;
+      border: 3px solid #1a2742;
+    }
+    .vpi-control input[type=range]::-moz-range-thumb {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--labs-accent-soft); cursor: pointer; border: 3px solid #1a2742;
+    }
+    .vpi-stress {
+      margin-top: auto; width: 100%;
+      padding: 13px; border-radius: 100px; cursor: pointer;
+      background: rgba(91,120,214,0.14); color: var(--labs-accent-soft);
+      border: 1px solid var(--labs-border-strong);
+      font-family: var(--font-primary); font-weight: 600; font-size: 14px;
+      transition: all var(--transition);
+    }
+    .vpi-stress:hover { background: rgba(91,120,214,0.24); }
+    .vpi-legend { display: flex; gap: 18px; margin-top: 16px; font-size: 12px; color: var(--labs-text-dim); }
+    .vpi-legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .vpi-legend i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+
+    /* Track record / accolades */
+    .labs-record { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .record-card {
+      background: var(--labs-panel); border: 1px solid var(--labs-border);
+      border-radius: var(--radius-lg); padding: 30px; transition: all var(--transition);
+    }
+    .record-card:hover { transform: translateY(-5px); border-color: var(--labs-border-strong); box-shadow: 0 18px 44px rgba(0,0,0,0.4); }
+    .record-emoji { font-size: 26px; margin-bottom: 16px; }
+    .record-card h3 { font-size: 18px; color: #fff; margin-bottom: 6px; line-height: 1.35; }
+    .record-card .badge {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--labs-green); margin-bottom: 14px;
+    }
+    .record-card .badge.amber { color: #f5b133; }
+    .record-card p { font-size: 14px; color: var(--labs-text-dim); line-height: 1.7; }
+
+    /* Procurement / Canadian framework strip */
+    .labs-frame { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .frame-item {
+      background: rgba(255,255,255,0.02); border: 1px solid var(--labs-border);
+      border-radius: var(--radius-md); padding: 26px 22px;
+    }
+    .frame-item i { font-size: 20px; color: var(--labs-accent-soft); margin-bottom: 14px; display: block; }
+    .frame-item h4 { font-size: 15px; color: #fff; margin-bottom: 8px; }
+    .frame-item p { font-size: 13px; color: var(--labs-text-dim); line-height: 1.6; }
+
+    /* Contact (dark) */
+    .labs-contact { padding: 96px 0; background: var(--labs-bg-2); border-top: 1px solid var(--labs-border); }
+    .labs-contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: start; }
+    .labs-contact-info h3 { font-size: 26px; color: #fff; margin-bottom: 10px; }
+    .labs-contact-info > p { font-size: 15px; color: var(--labs-text-dim); line-height: 1.7; margin-bottom: 28px; }
+    .lc-item { display: flex; gap: 14px; margin-bottom: 22px; align-items: flex-start; }
+    .lc-item .ic {
+      width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(91,120,214,0.14); color: var(--labs-accent-soft);
+      border: 1px solid var(--labs-border-strong);
+    }
+    .lc-item .k { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--labs-text-dim); }
+    .lc-item p { font-size: 14.5px; color: var(--labs-text); }
+    .lc-item a { color: var(--labs-text); }
+    .lc-item a:hover { color: #fff; }
+
+    .labs-form { background: var(--labs-panel); border: 1px solid var(--labs-border); border-radius: var(--radius-lg); padding: 32px; }
+    .labs-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .labs-form .form-field { margin-bottom: 20px; }
+    .labs-form label { display: block; font-size: 12px; font-weight: 600; color: var(--labs-text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .labs-form input, .labs-form textarea {
+      width: 100%; padding: 12px 14px; border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.03); border: 1px solid var(--labs-border);
+      color: #fff; font-family: var(--font-primary); font-size: 14.5px;
+      transition: border-color var(--transition);
+    }
+    .labs-form input::placeholder, .labs-form textarea::placeholder { color: #5d6a85; }
+    .labs-form input:focus, .labs-form textarea:focus { outline: none; border-color: var(--labs-border-strong); }
+    .labs-form textarea { min-height: 110px; resize: vertical; }
+    .labs-form .labs-btn-primary { width: 100%; justify-content: center; border: none; }
+
+    /* Footer (Canada only) */
+    .labs-footer { background: #06090f; color: var(--labs-text-dim); padding: 64px 0 28px; border-top: 1px solid var(--labs-border); }
+    .labs-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+    .labs-footer .logo img { height: 34px; filter: brightness(0) invert(1); }
+    .labs-footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 16px; max-width: 320px; }
+    .labs-footer-brand .made { margin-top: 14px; font-size: 13px; color: var(--labs-accent-soft); font-weight: 600; }
+    .labs-footer h4 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
+    .labs-footer ul { list-style: none; }
+    .labs-footer li { margin-bottom: 10px; }
+    .labs-footer a { font-size: 14px; color: var(--labs-text-dim); }
+    .labs-footer a:hover { color: #fff; }
+    .labs-footer-bottom { border-top: 1px solid var(--labs-border); padding-top: 22px; text-align: center; font-size: 13px; color: #54607a; }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .labs-badge .dot, .vpi-lock .blip { animation: none; }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .labs-vectors { grid-template-columns: 1fr; }
+      .labs-record { grid-template-columns: 1fr; }
+      .labs-frame { grid-template-columns: repeat(2, 1fr); }
+      .vpi-wrap { grid-template-columns: 1fr; }
+      .labs-hero-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .labs-hero { padding: 130px 0 70px; }
+      .labs-hero h1 { font-size: 34px; }
+      .labs-head h2 { font-size: 28px; }
+      .labs-section { padding: 64px 0; }
+      .labs-frame { grid-template-columns: 1fr; }
+      .labs-contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .labs-form .form-row { grid-template-columns: 1fr; }
+      .labs-footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .labs-hero-rail { flex-wrap: wrap; gap: 22px; }
+    }
+  </style>
+</head>
+<body class="labs">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="img/wp/tan-e1764091769895.png" alt="The Alpha Nova">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/labs" class="active">AN Labs</a></li>
+          <li><a href="#contact" class="nav-cta">Engage Us</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="labs-hero">
+    <div class="container">
+      <div class="labs-hero-grid">
+        <div class="hero-content">
+          <span class="labs-badge"><span class="dot"></span>&#127464;&#127462; Canadian-Owned &amp; Operated R&amp;D</span>
+          <span class="labs-eyebrow">The Alpha Nova Labs &nbsp;/&nbsp; AN Labs</span>
+          <h1>Advancing <span class="grad">Sovereign Tech</span> &amp; Intelligent Systems.</h1>
+          <p>The Alpha Nova Labs (AN Labs) is our Canadian-based research and development division. We pioneer advanced solutions at the intersection of computer vision, autonomous systems, and real-time edge intelligence to solve high-stakes industrial and security challenges.</p>
+          <div class="labs-hero-actions">
+            <a href="#contact" class="labs-btn labs-btn-primary">Engage Our Lab <i class="fas fa-arrow-right"></i></a>
+            <a href="#vectors" class="labs-btn labs-btn-ghost">Research Vectors</a>
+          </div>
+          <div class="labs-hero-rail">
+            <div class="item"><strong>100%</strong><span>Canadian Operations</span></div>
+            <div class="item"><strong>Edge</strong><span>Real-Time Intelligence</span></div>
+            <div class="item"><strong>Northern</strong><span>Industrial Test Sites</span></div>
+          </div>
+        </div>
+        <div class="labs-hero-side">
+          <!-- The live demo doubles as the hero's visual anchor -->
+          <div class="vpi-stage" style="border:1px solid var(--labs-border-strong); border-radius:16px;">
+            <div class="vpi-overlay">
+              <span>Signal Track</span>
+              <span class="vpi-lock" id="vpi-lock-hero"><span class="blip"></span>Locked</span>
+            </div>
+            <canvas id="vpi-canvas-hero"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Research Vectors -->
+  <section class="labs-section" id="vectors">
+    <div class="container">
+      <div class="labs-head scroll-reveal">
+        <span class="tag">Core Research Fields</span>
+        <h2>Where We Push the Edge</h2>
+        <p>Our technical capabilities, framed under Canadian industrial and security standards &mdash; engineered for low-visibility, high-stakes operating environments.</p>
+      </div>
+      <div class="labs-vectors scroll-reveal">
+        <div class="vector-card">
+          <div class="vector-icon"><i class="fas fa-satellite-dish"></i></div>
+          <h3>Autonomous Systems &amp; Signal Processing</h3>
+          <div class="tech">mmWave Radar &middot; RF-based tracking &middot; Sensor fusion algorithms</div>
+          <p>Non-optical tracking that operates where cameras fail &mdash; through smoke, darkness, and obscurants &mdash; for personnel safety and low-visibility tactical navigation.</p>
+          <div class="vector-app">Application &mdash; Non-optical tracking &amp; navigation</div>
+        </div>
+        <div class="vector-card">
+          <div class="vector-icon"><i class="fas fa-cube"></i></div>
+          <h3>Spatial AI &amp; Computer Vision</h3>
+          <div class="tech">Real-time object detection &middot; 3D digital reconstruction &middot; Edge analytics</div>
+          <p>Autonomous machinery guidance, situational awareness, and automated site inspection built to run on-device at the edge &mdash; no dependency on continuous connectivity.</p>
+          <div class="vector-app">Application &mdash; Situational awareness &amp; inspection</div>
+        </div>
+        <div class="vector-card">
+          <div class="vector-icon"><i class="fas fa-wave-square"></i></div>
+          <h3>Telemetry &amp; Predictive Analytics</h3>
+          <div class="tech">High-frequency biometric processing &middot; HRV &middot; Edge computing</div>
+          <p>Remote personnel health tracking and critical-environment safety monitoring, turning high-frequency telemetry into early-warning signals on the edge.</p>
+          <div class="vector-app">Application &mdash; Personnel &amp; environment safety</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Performance Indicator -->
+  <section class="labs-section alt">
+    <div class="container">
+      <div class="labs-head scroll-reveal">
+        <span class="tag">Visual Performance Indicator</span>
+        <h2>Stability Under Stress</h2>
+        <p>A live demonstration of how our Canadian-engineered tracking systems maintain a stable lock under extreme environmental stress and signal noise. Push the noise &mdash; the track holds.</p>
+      </div>
+      <div class="vpi-wrap scroll-reveal">
+        <div class="vpi-stage">
+          <div class="vpi-overlay">
+            <span>Track Estimator &mdash; Live</span>
+            <span class="vpi-lock" id="vpi-lock"><span class="blip"></span>Locked</span>
+          </div>
+          <canvas id="vpi-canvas"></canvas>
+        </div>
+        <div class="vpi-panel">
+          <h3>System Telemetry</h3>
+          <p>Raw sensor input is corrupted with injected noise. Our estimator fuses and filters it in real time to hold a clean track.</p>
+          <div class="vpi-metrics">
+            <div class="vpi-metric">
+              <div class="v good" id="vpi-stability">99.2%</div>
+              <div class="k">Track Stability</div>
+            </div>
+            <div class="vpi-metric">
+              <div class="v" id="vpi-noise">12%</div>
+              <div class="k">Input Noise</div>
+            </div>
+            <div class="vpi-metric">
+              <div class="v" id="vpi-latency">3.4<span style="font-size:14px">ms</span></div>
+              <div class="k">Est. Latency</div>
+            </div>
+            <div class="vpi-metric">
+              <div class="v" id="vpi-snr">18<span style="font-size:14px">dB</span></div>
+              <div class="k">Recovered SNR</div>
+            </div>
+          </div>
+          <div class="vpi-control">
+            <label>Signal Noise <span id="vpi-noise-label">12%</span></label>
+            <input type="range" id="vpi-noise-slider" min="0" max="100" value="12">
+          </div>
+          <button class="vpi-stress" id="vpi-stress"><i class="fas fa-bolt"></i> &nbsp;Inject Interference Burst</button>
+          <div class="vpi-legend">
+            <span><i style="background:#3a4a6e"></i> Raw sensor</span>
+            <span><i style="background:#5b78d6"></i> Filtered track</span>
+            <span><i style="background:#34d399"></i> Ground truth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Track Record -->
+  <section class="labs-section">
+    <div class="container">
+      <div class="labs-head scroll-reveal">
+        <span class="tag">Track Record &amp; Technical Wins</span>
+        <h2>Proven Under Pressure</h2>
+        <p>Demonstrated capability in high-pressure, competitive engineering environments &mdash; right here in Canada.</p>
+      </div>
+      <div class="labs-record scroll-reveal">
+        <div class="record-card">
+          <div class="record-emoji">&#127942;</div>
+          <span class="badge">Winner</span>
+          <h3>Côté Gold Blast Captain DevFest Challenge</h3>
+          <p>Autonomous systems optimization and algorithmic problem-solving for heavy industrial applications. We developed high-velocity solutions matching strict operational criteria &mdash; placing first against 29 teams from across Ontario.</p>
+        </div>
+        <div class="record-card">
+          <div class="record-emoji">&#128737;&#65039;</div>
+          <span class="badge amber">Top-Tier Placement</span>
+          <h3>Canadian Red Team Hackathon Series</h3>
+          <p>System stress-testing, vulnerability research, and hardening of autonomous software architectures against edge-case disruption and adversarial interference.</p>
+        </div>
+        <div class="record-card">
+          <div class="record-emoji">&#127891;</div>
+          <span class="badge">Active R&amp;D</span>
+          <h3>Advanced Research &amp; Applied Engineering Pipelines</h3>
+          <p>Ongoing initiatives validating cutting-edge frameworks &mdash; bridging the gap between peer-reviewed methodology and production-ready, secure industrial applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Canadian Procurement Framework -->
+  <section class="labs-section alt">
+    <div class="container">
+      <div class="labs-head scroll-reveal">
+        <span class="tag">Built for Canadian Procurement</span>
+        <h2>A Unified, Single-Jurisdiction Partner</h2>
+        <p>A domestic-only footprint that reduces regulatory friction and aligns with Canadian defence, controlled-goods, and dual-use industrial procurement requirements.</p>
+      </div>
+      <div class="labs-frame scroll-reveal">
+        <div class="frame-item">
+          <i class="fas fa-flag"></i>
+          <h4>Single-Jurisdiction</h4>
+          <p>All engineering, IP, and operations based entirely in Canada &mdash; no cross-border dependencies.</p>
+        </div>
+        <div class="frame-item">
+          <i class="fas fa-database"></i>
+          <h4>Domestic Data Residency</h4>
+          <p>Data and development kept within Canadian boundaries to support sovereign requirements.</p>
+        </div>
+        <div class="frame-item">
+          <i class="fas fa-mountain"></i>
+          <h4>Northern Test Environments</h4>
+          <p>Access to rugged Northern Ontario industrial settings &mdash; ideal for mining and edge-case validation.</p>
+        </div>
+        <div class="frame-item">
+          <i class="fas fa-industry"></i>
+          <h4>Industrial Pedigree</h4>
+          <p>Roots in Sudbury's mining and resource sector inform rugged, field-ready engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="labs-contact" id="contact">
+    <div class="container">
+      <div class="labs-contact-grid">
+        <div class="labs-contact-info scroll-reveal">
+          <span class="labs-badge"><span class="dot"></span> Procurement &amp; Partnerships</span>
+          <h3 style="margin-top:18px;">Engage AN Labs</h3>
+          <p>For defence, controlled-goods, and dual-use industrial inquiries, reach our Canadian R&amp;D team directly.</p>
+          <div class="lc-item">
+            <div class="ic"><i class="fas fa-envelope"></i></div>
+            <div><span class="k">Email</span><p><a href="mailto:info@thealphanova.com">info@thealphanova.com</a></p></div>
+          </div>
+          <div class="lc-item">
+            <div class="ic"><i class="fas fa-phone"></i></div>
+            <div><span class="k">Phone</span><p><a href="tel:+14374245384">+1 437 424 5384</a></p></div>
+          </div>
+          <div class="lc-item">
+            <div class="ic"><i class="fas fa-map-marker-alt"></i></div>
+            <div><span class="k">R&amp;D Base</span><p>1545 Maley Drive, Greater Sudbury,<br>Ontario, P3A 4R7, Canada</p></div>
+          </div>
+        </div>
+        <form class="labs-form scroll-reveal" action="sendemail.php" method="POST">
+          <input type="hidden" name="subject" value="AN Labs — Procurement / R&D Inquiry">
+          <div class="form-row">
+            <div class="form-field">
+              <label>Name *</label>
+              <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-field">
+              <label>Organization</label>
+              <input type="text" name="organization" placeholder="Department / company">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label>Email *</label>
+              <input type="email" name="email" placeholder="you@organization.ca" required>
+            </div>
+            <div class="form-field">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="Phone number">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>How can AN Labs support your program? *</label>
+            <textarea name="message" placeholder="Briefly describe your capability requirement or research interest..." required></textarea>
+          </div>
+          <button type="submit" class="labs-btn labs-btn-primary">Submit Inquiry <i class="fas fa-arrow-right"></i></button>
+          <div id="form-status" style="display:none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 14px; font-weight: 500;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Canada only) -->
+  <footer class="labs-footer">
+    <div class="container">
+      <div class="labs-footer-grid">
+        <div class="labs-footer-brand">
+          <a href="/" class="logo"><img src="img/wp/tan-e1764091769895.png" alt="The Alpha Nova"></a>
+          <p>The Alpha Nova Labs (AN Labs) &mdash; the advanced engineering and rapid prototyping division of The Alpha Nova, operating entirely out of Canada.</p>
+          <p class="made">&#127464;&#127462; Engineered in Greater Sudbury, Ontario</p>
+        </div>
+        <div>
+          <h4>AN Labs</h4>
+          <ul>
+            <li><a href="#vectors">Research Vectors</a></li>
+            <li><a href="#contact">Engage Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/">The Alpha Nova</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="mailto:info@thealphanova.com">info@thealphanova.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="labs-footer-bottom">
+        &copy; 2026 The Alpha Nova Labs. Proudly Canadian. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- AN Labs — Visual Performance Indicator (self-contained) -->
+  <script>
+  (function () {
+    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function makeTracker(canvas, opts) {
+      opts = opts || {};
+      var ctx = canvas.getContext('2d');
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var W = 0, H = 0;
+      var t = 0;
+      var est = 0;           // filtered estimate (normalized -1..1)
+      var noise = (opts.noise != null ? opts.noise : 12) / 100;
+      var burst = 0;         // transient interference
+      var raw = [];          // history of raw points
+      var filt = [];         // history of filtered points
+      var truth = [];        // history of ground-truth points
+      var maxPts = 220;
+
+      function resize() {
+        var r = canvas.getBoundingClientRect();
+        W = r.width; H = r.height;
+        canvas.width = W * dpr; canvas.height = H * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      // deterministic-ish noise without Math.random dependence on cadence
+      function rnd() { return (Math.sin(t * 12.9898 + raw.length * 78.233) * 43758.5453) % 1; }
+
+      function step() {
+        t += 0.045;
+        // ground truth: smooth composite sine (the "real" signal)
+        var gt = 0.55 * Math.sin(t) + 0.22 * Math.sin(t * 2.3 + 1.0);
+        // raw measurement = truth + noise + burst
+        var n = (rnd() - 0.5) * 2 * (noise * 1.6 + burst);
+        var measured = gt + n;
+        // simple low-pass / complementary filter (the "estimator")
+        var alpha = 0.12 + noise * 0.05;   // adapts slightly with noise
+        est = est + alpha * (measured - est);
+
+        raw.push(measured); filt.push(est); truth.push(gt);
+        if (raw.length > maxPts) { raw.shift(); filt.shift(); truth.shift(); }
+
+        burst *= 0.94; // decay interference
+
+        draw();
+        update();
+      }
+
+      function yOf(v) { return H / 2 - v * (H * 0.34); }
+
+      function line(arr, color, width, alpha) {
+        ctx.beginPath();
+        ctx.lineWidth = width; ctx.strokeStyle = color; ctx.globalAlpha = alpha || 1;
+        for (var i = 0; i < arr.length; i++) {
+          var x = (i / (maxPts - 1)) * W;
+          var y = yOf(arr[i]);
+          if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.stroke(); ctx.globalAlpha = 1;
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        // baseline grid
+        ctx.strokeStyle = 'rgba(122,143,204,0.10)'; ctx.lineWidth = 1;
+        for (var gy = 0; gy <= 4; gy++) {
+          var y = (H / 4) * gy; ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+        }
+        line(raw, '#3a4a6e', 1.2, 0.9);     // raw sensor
+        line(truth, '#34d399', 1.4, 0.55);  // ground truth
+        line(filt, '#5b78d6', 2.4, 1);      // filtered track
+        // leading dot on the filtered track
+        if (filt.length) {
+          var lx = ((filt.length - 1) / (maxPts - 1)) * W;
+          var ly = yOf(filt[filt.length - 1]);
+          ctx.beginPath(); ctx.fillStyle = '#8ea6ee';
+          ctx.arc(lx, ly, 3.2, 0, Math.PI * 2); ctx.fill();
+        }
+      }
+
+      function update() {
+        if (!opts.onMetrics) return;
+        // stability falls with noise + active burst, but stays robust
+        var error = Math.abs(filt[filt.length - 1] - truth[truth.length - 1]);
+        var stability = Math.max(72, 100 - (noise * 22) - burst * 30 - error * 18);
+        var snr = Math.max(3, 22 - noise * 16 - burst * 8);
+        var latency = 2.6 + noise * 4.5 + burst * 3;
+        opts.onMetrics({
+          stability: stability,
+          noisePct: Math.round(noise * 100),
+          snr: snr,
+          latency: latency,
+          locked: stability > 85
+        });
+      }
+
+      var raf;
+      function loop() { step(); raf = requestAnimationFrame(loop); }
+      if (prefersReduced) { for (var i = 0; i < maxPts; i++) step(); }
+      else loop();
+
+      return {
+        setNoise: function (v) { noise = v / 100; },
+        injectBurst: function () { burst = Math.min(burst + 0.9, 1.6); },
+        stop: function () { cancelAnimationFrame(raf); }
+      };
+    }
+
+    // Hero tracker (visual only)
+    var heroCanvas = document.getElementById('vpi-canvas-hero');
+    var heroLock = document.getElementById('vpi-lock-hero');
+    if (heroCanvas) {
+      makeTracker(heroCanvas, {
+        noise: 14,
+        onMetrics: function (m) {
+          if (!heroLock) return;
+          if (m.locked) { heroLock.classList.remove('warn'); heroLock.innerHTML = '<span class="blip"></span>Locked'; }
+          else { heroLock.classList.add('warn'); heroLock.innerHTML = '<span class="blip"></span>Reacquiring'; }
+        }
+      });
+    }
+
+    // Main interactive tracker
+    var canvas = document.getElementById('vpi-canvas');
+    if (canvas) {
+      var elStab = document.getElementById('vpi-stability');
+      var elNoise = document.getElementById('vpi-noise');
+      var elLat = document.getElementById('vpi-latency');
+      var elSnr = document.getElementById('vpi-snr');
+      var elLock = document.getElementById('vpi-lock');
+      var slider = document.getElementById('vpi-noise-slider');
+      var noiseLabel = document.getElementById('vpi-noise-label');
+      var stress = document.getElementById('vpi-stress');
+
+      var tracker = makeTracker(canvas, {
+        noise: 12,
+        onMetrics: function (m) {
+          elStab.textContent = m.stability.toFixed(1) + '%';
+          elStab.classList.toggle('good', m.locked);
+          elNoise.textContent = m.noisePct + '%';
+          elLat.innerHTML = m.latency.toFixed(1) + '<span style="font-size:14px">ms</span>';
+          elSnr.innerHTML = Math.round(m.snr) + '<span style="font-size:14px">dB</span>';
+          if (m.locked) { elLock.classList.remove('warn'); elLock.innerHTML = '<span class="blip"></span>Locked'; }
+          else { elLock.classList.add('warn'); elLock.innerHTML = '<span class="blip"></span>Reacquiring'; }
+        }
+      });
+
+      slider.addEventListener('input', function () {
+        tracker.setNoise(+slider.value);
+        noiseLabel.textContent = slider.value + '%';
+      });
+      stress.addEventListener('click', function () { tracker.injectBurst(); });
+    }
+  })();
+  </script>
+</body>
+</html>
