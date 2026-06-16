@@ -33,6 +33,9 @@
     @media (max-width:768px) {
       .labs-promo { grid-template-columns:1fr !important; padding:36px 24px !important; gap:28px !important; }
     }
+    /* Homepage featured case studies: 3-up row */
+    .featured-grid { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 980px) { .featured-grid { grid-template-columns: 1fr; } }
   </style>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -365,6 +368,15 @@
           <div>
             <h4>VanGuardian: Fall Detection</h4>
             <p>AI-powered fall detection without wearables. Safety in every stumble.</p>
+          </div>
+        </a>
+        <a href="/case-woblu" class="featured-card">
+          <div class="featured-card-image">
+            <img src="img/woblu-team.jpg" alt="Woblu">
+          </div>
+          <div>
+            <h4>Woblu</h4>
+            <p>Award-winning on-demand home services app. 1st place and $18K in accelerator funding.</p>
           </div>
         </a>
       </div>
