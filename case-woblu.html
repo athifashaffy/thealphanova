@@ -27,9 +27,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .app-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 920px; margin: 0 auto; }
-    .app-gallery img { width: 100%; height: auto; border-radius: 16px; box-shadow: 0 8px 28px rgba(0,0,0,0.10); }
-    @media (max-width: 768px) { .app-gallery { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
+    .app-gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; max-width: 1100px; margin: 0 auto; }
+    .app-gallery img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); }
+    @media (max-width: 860px) {
+      .app-gallery { display: flex; overflow-x: auto; gap: 12px; padding-bottom: 10px; -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+      .app-gallery img { flex: 0 0 auto; width: 150px; scroll-snap-align: center; }
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQY5692DSS"></script>
