@@ -120,6 +120,12 @@ if (formStatus && urlParams.get('status')) {
     formStatus.style.background = '#fef2f2';
     formStatus.style.color = '#991b1b';
     formStatus.style.border = '1px solid #fecaca';
+  } else if (status === 'captcha') {
+    formStatus.textContent = 'Please complete the reCAPTCHA verification and try again.';
+    formStatus.style.display = 'block';
+    formStatus.style.background = '#fffbeb';
+    formStatus.style.color = '#92400e';
+    formStatus.style.border = '1px solid #fde68a';
   }
   // Clean URL
   history.replaceState(null, '', window.location.pathname + window.location.hash);
