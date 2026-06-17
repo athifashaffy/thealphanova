@@ -41,7 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         if ($verifyJson !== false) {
             $verify = json_decode($verifyJson, true);
-            $captchaOk = !empty($verify['success']);
+            // v3 returns a score (0.0 - 1.0); require a reasonable threshold.
+            // v2 has no score, so success alone is enough.
+            $scoreOk = !isset($verify['score']) || $verify['score'] >= 0.5;
+            $captchaOk = !empty($verify['success']) && $scoreOk;
         }
     }
     if (!$captchaOk) {
