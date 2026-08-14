@@ -2,6 +2,36 @@
    The Alpha Nova - Main JS
    ======================================== */
 
+/* ── Booking ────────────────────────────────────────────────────────
+   SINGLE SOURCE OF TRUTH for the Calendly link. Paste your real event
+   URL here (e.g. 'https://calendly.com/your-handle/30min') and every
+   "Book a Call" button switches from linking to /book to opening the
+   Calendly popup, and the inline embed on /book activates.
+
+   Left empty, nothing breaks: every button still goes to /book, which
+   carries the qualification form, email and phone.
+*/
+const CALENDLY_URL = 'https://calendly.com/athif-thealphanova/30min';
+
+if (CALENDLY_URL) {
+  document.querySelectorAll('[data-calendly]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      if (typeof Calendly === 'undefined') return; // let the href do its job
+      e.preventDefault();
+      Calendly.initPopupWidget({ url: CALENDLY_URL });
+    });
+  });
+  const inline = document.getElementById('calendly-inline');
+  if (inline) {
+    const fallback = document.getElementById('calendly-fallback');
+    if (fallback) fallback.style.display = 'none';
+    inline.style.display = 'block';
+    if (typeof Calendly !== 'undefined') {
+      Calendly.initInlineWidget({ url: CALENDLY_URL, parentElement: inline });
+    }
+  }
+}
+
 // Hero typed text animation
 if (document.querySelector('.typed-text')) {
   new Typed('.typed-text', {
@@ -29,55 +59,70 @@ if (menuBtn) {
     navLinks.classList.toggle('open');
     menuBtn.classList.toggle('active');
   });
-  // Close on link click
+  // Close on link click (but not the Products dropdown toggle)
   navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => navLinks.classList.remove('open'));
-  });
-}
-
-// Counter animation
-function animateCounters() {
-  document.querySelectorAll('[data-count]').forEach(el => {
-    const target = parseInt(el.dataset.count);
-    const suffix = el.dataset.suffix || '';
-    const duration = 2000;
-    const start = performance.now();
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(target * eased) + suffix;
-      if (progress < 1) requestAnimationFrame(update);
-    }
-    requestAnimationFrame(update);
-  });
-}
-
-// Intersection Observer for counter animation
-document.querySelectorAll('.stats-grid, .metrics-grid').forEach(section => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('[data-count]').forEach(el => {
-          const target = parseInt(el.dataset.count);
-          const suffix = el.dataset.suffix || '';
-          const duration = 2000;
-          const start = performance.now();
-          function update(now) {
-            const elapsed = now - start;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            el.textContent = Math.floor(target * eased) + suffix;
-            if (progress < 1) requestAnimationFrame(update);
-          }
-          requestAnimationFrame(update);
-        });
-        observer.unobserve(entry.target);
-      }
+    a.addEventListener('click', () => {
+      if (a.classList.contains('nav-drop-toggle')) return;
+      navLinks.classList.remove('open');
     });
-  }, { threshold: 0.3 });
-  observer.observe(section);
+  });
+}
+
+// Products dropdown: tap to toggle (works on mobile + desktop)
+document.querySelectorAll('.nav-drop-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggle.closest('.nav-dropdown').classList.toggle('open');
+  });
+});
+// Close any open dropdown when clicking outside it
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-dropdown')) {
+    document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+  }
+});
+
+// Counter animation.
+// The real figure is always written in the HTML (e.g. "50+"), so crawlers,
+// screen readers and no-JS visitors see the number rather than a zero. This
+// only replays it as a count-up when the block scrolls into view.
+const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function countUp(el) {
+  const target = parseInt(el.dataset.count, 10);
+  if (Number.isNaN(target)) return;
+  const suffix = el.dataset.suffix || '';
+  const duration = 2000;
+  const start = performance.now();
+  function update(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(target * eased) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+if (!REDUCED_MOTION) {
+  document.querySelectorAll('.stats-grid, .metrics-grid').forEach(section => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.querySelectorAll('[data-count]').forEach(countUp);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.3 });
+    observer.observe(section);
+  });
+}
+
+// FAQ accordions (service pages)
+document.querySelectorAll('.faq-item-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
 });
 
 // Tabs (About page)

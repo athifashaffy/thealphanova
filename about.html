@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=20260717b">
+  <link rel="stylesheet" href="css/style.css?v=20260814">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQY5692DSS"></script>
   <script>
@@ -126,11 +126,21 @@
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/case-studies">Case Studies</a></li>
-          <li><a href="/about" class="active">About Us</a></li>
-          <li><a href="/signa">SIGNA</a></li><li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
-          <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/industries">Industries</a></li>
+          <li><a href="/case-studies">Work</a></li>
+          <li class="nav-dropdown">
+            <a href="/products" class="nav-drop-toggle">Products <i class="fas fa-chevron-down"></i></a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/cogito-ai">Cogito AI</a></li>
+              <li><a href="/signa">SIGNA</a></li>
+              <li><a href="/case-vanguardian">VanGuardian</a></li>
+              <li><a href="/products">All Products</a></li>
+            </ul>
+          </li>
+          <li><a href="https://labs.thealphanova.com/">Labs</a></li>
+          <li><a href="/about" class="active">About</a></li>
+          <li><a href="/book" class="nav-cta" data-calendly>Book a Call</a></li>
         </ul>
       </nav>
       <button class="mobile-menu-btn" aria-label="Menu">
@@ -501,16 +511,21 @@
           <p style="margin-top: 12px; font-size: 13px;">
             &#127464;&#127462; Proudly built in Canada
           </p>
+          <div class="grant-badge">
+            <a href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener">
+              <img src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp" alt="ElevenLabs Grants">
+            </a>
+          </div>
         </div>
         <div>
           <h4>Services</h4>
           <ul class="footer-links">
-            <li><a href="#">Mobile App Development</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Analytical & AI</a></li>
-            <li><a href="#">Custom Software</a></li>
-            <li><a href="#">Product & UI/UX</a></li>
-            <li><a href="#">Database Engineering</a></li>
+            <li><a href="/ai-development">AI Development</a></li>
+            <li><a href="/industrial-iot">Industrial &amp; IoT</a></li>
+            <li><a href="/custom-software-development">Custom Software</a></li>
+            <li><a href="/mobile-app-development">Mobile App Development</a></li>
+            <li><a href="/software-modernization">Software Modernization</a></li>
+            <li><a href="/services">All Services</a></li>
           </ul>
         </div>
         <div>
@@ -518,7 +533,11 @@
           <ul class="footer-links">
             <li><a href="/about">About Us</a></li>
             <li><a href="/case-studies">Case Studies</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/industries">Industries</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
+            <li><a href="/software-development-sudbury">Software Development Sudbury</a></li>
+            <li><a href="/book">Book a Call</a></li>
           </ul>
         </div>
         <div class="footer-contact">
@@ -539,6 +558,8 @@
     </div>
   </footer>
 
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="js/main.js"></script>
 </body>
 </html>

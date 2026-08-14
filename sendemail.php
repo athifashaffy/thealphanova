@@ -6,6 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $organization = htmlspecialchars($_POST['organization'] ?? '');
     $subjectField = htmlspecialchars($_POST['subject'] ?? '');
     $message = htmlspecialchars($_POST['message'] ?? '');
+    $budget = htmlspecialchars($_POST['budget'] ?? '');
+    $timeline = htmlspecialchars($_POST['timeline'] ?? '');
 
     // Redirect back to the page that submitted the form (main site or labs subdomain)
     $back = isset($_SERVER['HTTP_REFERER']) ? strtok($_SERVER['HTTP_REFERER'], '?#') : '/';
@@ -56,6 +58,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = $subjectField !== '' ? "Website Inquiry: $subjectField" : "New Message from Contact Form";
     $body = "Name: $name\nEmail: $email\nPhone: $phone\n";
     if ($organization !== '') { $body .= "Organization: $organization\n"; }
+    // Qualification fields from the project-enquiry form.
+    if ($budget !== '')   { $body .= "Budget: $budget\n"; }
+    if ($timeline !== '') { $body .= "Timeline: $timeline\n"; }
     $body .= "\nMessage:\n$message";
     $headers = "From: $email\r\nReply-To: $email\r\nX-Mailer: PHP/" . phpversion();
 
