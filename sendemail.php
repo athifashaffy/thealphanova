@@ -12,8 +12,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Redirect back to the page that submitted the form (main site or labs subdomain)
     $back = isset($_SERVER['HTTP_REFERER']) ? strtok($_SERVER['HTTP_REFERER'], '?#') : '/';
 
-    // --- reCAPTCHA v2 verification ---
-    $recaptchaSecret = "6LdZ0yMtAAAAAJet7BiS0g7b5PP438J6nKEaQd6y";
+    // --- reCAPTCHA verification ---
+    // The secret is loaded from recaptcha-config.php, which is gitignored and
+    // lives only on the server. It used to be hardcoded here — in a public
+    // repository — which burned the previous key. Do not put it back.
+    $recaptchaSecret = '';
+    $cfgPath = __DIR__ . '/recaptcha-config.php';
+    if (is_readable($cfgPath)) {
+        $cfg = include $cfgPath;
+        if (is_array($cfg) && !empty($cfg['secret'])) {
+            $recaptchaSecret = $cfg['secret'];
+        }
+    }
+    if ($recaptchaSecret === '' && getenv('RECAPTCHA_SECRET')) {
+        $recaptchaSecret = getenv('RECAPTCHA_SECRET');
+    }
+    // Fail closed. An unconfigured secret must not silently disable the check.
+    if ($recaptchaSecret === '') {
+        error_log('sendemail.php: reCAPTCHA secret not configured (recaptcha-config.php missing or empty)');
+        header("Location: {$back}?status=config#contact");
+        exit;
+    }
+
     $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
     $captchaOk = false;
     if ($recaptchaResponse !== '') {

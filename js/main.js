@@ -171,6 +171,16 @@ if (formStatus && urlParams.get('status')) {
     formStatus.style.background = '#fffbeb';
     formStatus.style.color = '#92400e';
     formStatus.style.border = '1px solid #fde68a';
+  } else if (status === 'config') {
+    // Server has no reCAPTCHA secret configured. Fail closed rather than
+    // silently accepting spam — give the visitor a route that still works.
+    formStatus.innerHTML = 'The form is temporarily unavailable. Please email ' +
+      '<a href="mailto:info@thealphanova.com" style="color:inherit;text-decoration:underline;">info@thealphanova.com</a>' +
+      ' and we\'ll get straight back to you.';
+    formStatus.style.display = 'block';
+    formStatus.style.background = '#fef2f2';
+    formStatus.style.color = '#991b1b';
+    formStatus.style.border = '1px solid #fecaca';
   }
   // Clean URL
   history.replaceState(null, '', window.location.pathname + window.location.hash);
