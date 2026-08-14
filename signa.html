@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGNA | Continuous Mental Health Monitoring from Wearable Data</title>
+  <meta name="description" content="SIGNA is a research-stage remote patient monitoring platform exploring how wearable data can support continuous tracking of depressive symptoms and treatment response between clinical appointments.">
+  <meta name="keywords" content="SIGNA, remote patient monitoring, wearable data mental health, depression monitoring research, HRV mental health, digital health Canada, treatment response monitoring, The Alpha Nova">
+  <meta name="author" content="The Alpha Nova">
+  <link rel="canonical" href="https://thealphanova.com/signa">
+  <!-- Open Graph -->
+  <meta property="og:title" content="SIGNA | Continuous Mental Health Monitoring from Wearable Data">
+  <meta property="og:description" content="A research-stage platform exploring how wearable data may support continuous tracking of depressive symptoms and treatment response between clinical appointments.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thealphanova.com/signa">
+  <meta property="og:image" content="https://thealphanova.com/img/signa/signa-hero.jpg">
+  <meta property="og:site_name" content="The Alpha Nova">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SIGNA | Continuous Mental Health Monitoring from Wearable Data">
+  <meta name="twitter:description" content="A research-stage platform exploring how wearable data may support continuous tracking of depressive symptoms and treatment response between clinical appointments.">
+  <meta name="twitter:image" content="https://thealphanova.com/img/signa/signa-hero.jpg">
+  <link rel="icon" href="https://thealphanova.com/img/wp/cropped-fav-32x32.jpg" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://thealphanova.com/css/style.css">
+
+  <!-- JSON-LD Structured Data (research-stage; no regulatory or diagnostic claims) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "SIGNA",
+    "url": "https://thealphanova.com/signa",
+    "description": "SIGNA is a research-stage remote patient monitoring platform exploring how wearable data can support continuous tracking of depressive symptoms and treatment response between clinical appointments.",
+    "about": "Research into continuous mental health monitoring from wearable-derived physiological and behavioural data.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Alpha Nova",
+      "url": "https://thealphanova.com",
+      "logo": "https://thealphanova.com/img/wp/tan-e1764091769895.png",
+      "email": "info@thealphanova.com",
+      "telephone": "+1-437-424-5384"
+    }
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQY5692DSS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KQY5692DSS');
+  </script>
+
+  <!-- ========================================
+       SIGNA - page-scoped styles
+       (kept here so shared css/style.css stays
+        an exact mirror of the main site)
+       ======================================== -->
+  <style>
+    :root {
+      --signa-blue: #2f49b2;
+      --signa-blue-dark: #243a90;
+      --signa-soft: #eef1fb;
+      --signa-tint: #f6f8fe;
+      --signa-line: #e3e8f5;
+      --signa-grid: rgba(47,73,178,0.05);
+    }
+    html { scroll-behavior: smooth; }
+    body.signa { background: var(--white); color: var(--body-text); }
+
+    /* Reusable: badge */
+    .sg-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 16px; border-radius: 100px;
+      background: rgba(47,73,178,0.08);
+      border: 1px solid rgba(47,73,178,0.2);
+      color: var(--signa-blue);
+      font-size: 12.5px; font-weight: 600;
+      letter-spacing: 0.5px; text-transform: uppercase;
+    }
+    .sg-badge .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--signa-blue);
+      box-shadow: 0 0 0 0 rgba(47,73,178,0.5);
+      animation: sg-pulse 2.4s infinite;
+    }
+    @keyframes sg-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(47,73,178,0.4); }
+      70% { box-shadow: 0 0 0 8px rgba(47,73,178,0); }
+      100% { box-shadow: 0 0 0 0 rgba(47,73,178,0); }
+    }
+
+    /* Reusable: buttons */
+    .sg-btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 14px 28px; border-radius: 100px;
+      font-weight: 600; font-size: 15px; cursor: pointer;
+      font-family: var(--font-primary); transition: all var(--transition);
+      border: 1px solid transparent; text-align: center;
+    }
+    .sg-btn-primary { background: var(--signa-blue); color: #fff; }
+    .sg-btn-primary:hover { background: var(--signa-blue-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(47,73,178,0.3); }
+    .sg-btn-ghost { background: var(--white); color: var(--signa-blue); border-color: var(--signa-blue); }
+    .sg-btn-ghost:hover { background: var(--signa-blue); color: #fff; transform: translateY(-2px); }
+
+    /* Reusable: section heading */
+    .sg-section { padding: 96px 0; position: relative; }
+    .sg-section.tint { background: var(--signa-tint); }
+    .sg-head { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+    .sg-head .tag {
+      display: inline-block; font-size: 13px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--signa-blue); margin-bottom: 12px;
+    }
+    .sg-head h2 { font-size: 38px; font-weight: 800; color: var(--heading-color); letter-spacing: -0.5px; margin-bottom: 14px; line-height: 1.15; }
+    .sg-head p { font-size: 17px; line-height: 1.7; color: var(--secondary-text); }
+
+    /* ---------- Hero ---------- */
+    .sg-hero {
+      position: relative; margin-top: 72px;
+      padding: 150px 0 90px; overflow: hidden;
+      background:
+        radial-gradient(800px 420px at 78% -10%, rgba(47,73,178,0.10), transparent 60%),
+        var(--white);
+    }
+    .sg-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(var(--signa-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--signa-grid) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(circle at 75% 30%, black, transparent 72%);
+      -webkit-mask-image: radial-gradient(circle at 75% 30%, black, transparent 72%);
+      pointer-events: none;
+    }
+    .sg-hero .container { position: relative; z-index: 1; }
+    .sg-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+    .sg-eyebrow {
+      display: inline-block; margin: 20px 0 16px;
+      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--secondary-text);
+    }
+    .sg-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 76px; font-weight: 800; line-height: 1; letter-spacing: -2px;
+      color: var(--signa-blue); margin-bottom: 14px;
+    }
+    .sg-hero .sub { font-size: 22px; font-weight: 600; color: var(--heading-color); line-height: 1.35; margin-bottom: 18px; }
+    .sg-hero p.desc { font-size: 16.5px; line-height: 1.75; color: var(--secondary-text); max-width: 540px; margin-bottom: 28px; }
+    .sg-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Hero device + signal visual */
+    .sg-hero-visual { position: relative; display: flex; justify-content: center; }
+    .sg-hero-visual .device {
+      position: relative; z-index: 2; width: 280px; max-width: 100%;
+      border-radius: 30px; overflow: hidden;
+      box-shadow: 0 30px 70px rgba(31,42,102,0.22);
+      border: 1px solid var(--signa-line);
+    }
+    .sg-hero-visual .device img { display: block; width: 100%; height: auto; }
+    .sg-wave {
+      position: absolute; left: 0; right: 0; top: 22%;
+      z-index: 1; width: 100%; height: 90px; opacity: 0.5;
+    }
+    .sg-wave path { fill: none; stroke: var(--signa-blue); stroke-width: 2.5; stroke-linecap: round;
+      stroke-dasharray: 6 10; animation: sg-dash 6s linear infinite; }
+    @keyframes sg-dash { to { stroke-dashoffset: -160; } }
+
+    /* ---------- Problem timeline ---------- */
+    .sg-timeline { display: flex; align-items: stretch; gap: 0; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+    .sg-tl-step {
+      flex: 1; min-width: 180px; background: var(--white);
+      border: 1px solid var(--signa-line); border-radius: var(--radius-md);
+      padding: 22px 20px; text-align: center;
+    }
+    .sg-tl-step .ic { font-size: 22px; color: var(--signa-blue); margin-bottom: 10px; }
+    .sg-tl-step h4 { font-size: 15px; color: var(--heading-color); margin-bottom: 6px; }
+    .sg-tl-step p { font-size: 13px; color: var(--light-gray); line-height: 1.55; }
+    .sg-tl-step.warn { border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.06); }
+    .sg-tl-arrow { display: flex; align-items: center; color: var(--tertiary); font-size: 18px; padding: 0 10px; }
+    .sg-stats-row { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; }
+    .sg-statbox { background: var(--white); border: 1px solid var(--signa-line); border-radius: var(--radius-md); padding: 24px 30px; text-align: center; min-width: 210px; }
+    .sg-statbox .v { font-family: var(--font-heading); font-size: 38px; font-weight: 800; color: var(--signa-blue); line-height: 1; }
+    .sg-statbox .k { font-size: 13px; color: var(--secondary-text); margin-top: 8px; }
+    .sg-callout {
+      max-width: 760px; margin: 0 auto; text-align: center;
+      background: var(--signa-soft); border: 1px solid var(--signa-line);
+      border-radius: var(--radius-lg); padding: 26px 30px;
+      font-size: 17px; font-weight: 600; color: var(--signa-blue-dark); line-height: 1.5;
+    }
+
+    /* ---------- Feature cards (Opportunity / Privacy) ---------- */
+    .sg-cards { display: grid; gap: 24px; }
+    .sg-cards.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .sg-cards.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .sg-card {
+      background: var(--white); border: 1px solid var(--signa-line);
+      border-radius: var(--radius-lg); padding: 30px 26px; transition: all var(--transition);
+    }
+    .sg-card:hover { transform: translateY(-6px); border-color: transparent; box-shadow: var(--shadow-hover); }
+    .sg-card .ic {
+      width: 50px; height: 50px; border-radius: 13px; margin-bottom: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 21px; background: rgba(47,73,178,0.1); color: var(--signa-blue);
+    }
+    .sg-card h3 { font-size: 18px; color: var(--heading-color); margin-bottom: 10px; }
+    .sg-card p { font-size: 14.5px; color: var(--light-gray); line-height: 1.7; }
+
+    /* ---------- Approach: workflow + dashboard ---------- */
+    .sg-approach-grid { display: grid; grid-template-columns: 1fr 0.82fr; gap: 50px; align-items: center; }
+    .sg-flow { display: flex; flex-direction: column; gap: 12px; }
+    .sg-flow-step {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--white); border: 1px solid var(--signa-line);
+      border-radius: var(--radius-md); padding: 16px 20px;
+    }
+    .sg-flow-step .n {
+      width: 34px; height: 34px; flex-shrink: 0; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--signa-blue); color: #fff; font-weight: 700; font-size: 14px;
+    }
+    .sg-flow-step h4 { font-size: 15.5px; color: var(--heading-color); margin: 0; }
+    .sg-flow-step .arrow { display: block; text-align: center; color: var(--tertiary); }
+    .sg-flow-connect { height: 14px; width: 1px; background: var(--signa-line); margin-left: 36px; }
+    .sg-dash-frame {
+      border-radius: 28px; overflow: hidden; border: 1px solid var(--signa-line);
+      box-shadow: 0 24px 60px rgba(31,42,102,0.18); max-width: 340px; margin: 0 auto;
+    }
+    .sg-dash-frame img { display: block; width: 100%; height: auto; }
+    .sg-note {
+      margin-top: 40px; text-align: center; font-size: 16px; font-weight: 600;
+      color: var(--signa-blue-dark);
+    }
+
+    /* ---------- Benefits ---------- */
+    .sg-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .sg-benefit-col {
+      background: var(--white); border: 1px solid var(--signa-line);
+      border-radius: var(--radius-lg); padding: 34px 32px;
+    }
+    .sg-benefit-col h3 { font-size: 20px; color: var(--signa-blue); margin-bottom: 20px; }
+    .sg-benefit-col ul { list-style: none; padding: 0; margin: 0; }
+    .sg-benefit-col li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; font-size: 15px; color: var(--secondary-text); line-height: 1.5; }
+    .sg-benefit-col li i { color: var(--signa-blue); margin-top: 3px; flex-shrink: 0; }
+
+    /* ---------- Research stats + roadmap ---------- */
+    .sg-bigstats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 50px; }
+    .sg-bigstat { text-align: center; background: var(--white); border: 1px solid var(--signa-line); border-radius: var(--radius-lg); padding: 34px 24px; }
+    .sg-bigstat .v { font-family: var(--font-heading); font-size: 52px; font-weight: 800; color: var(--signa-blue); line-height: 1; }
+    .sg-bigstat .k { font-size: 14px; color: var(--secondary-text); margin-top: 10px; }
+    .sg-roadmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 36px; }
+    .sg-road-step {
+      position: relative; background: var(--white); border: 1px solid var(--signa-line);
+      border-radius: var(--radius-md); padding: 24px 20px;
+    }
+    .sg-road-step .step-n {
+      width: 30px; height: 30px; border-radius: 50%; background: var(--signa-soft);
+      color: var(--signa-blue); font-weight: 700; font-size: 14px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+    }
+    .sg-road-step h4 { font-size: 15px; color: var(--heading-color); line-height: 1.4; }
+    .sg-road-step.current { border-color: var(--signa-blue); box-shadow: 0 0 0 3px rgba(47,73,178,0.08); }
+    .sg-road-step.current .step-n { background: var(--signa-blue); color: #fff; }
+
+    /* ---------- Why different: checklist ---------- */
+    .sg-checks { max-width: 820px; margin: 0 auto 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; }
+    .sg-check { display: flex; gap: 14px; align-items: flex-start; font-size: 15.5px; color: var(--secondary-text); line-height: 1.5; }
+    .sg-check i {
+      width: 26px; height: 26px; flex-shrink: 0; border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(47,73,178,0.1); color: var(--signa-blue); font-size: 13px;
+    }
+    .sg-highlight {
+      max-width: 820px; margin: 0 auto; text-align: center;
+      font-size: 19px; font-weight: 700; color: var(--signa-blue-dark); line-height: 1.5;
+    }
+
+    /* ---------- Join community: interest cards ---------- */
+    .sg-join { background: linear-gradient(160deg, var(--signa-blue) 0%, var(--signa-blue-dark) 100%); color: #fff; }
+    .sg-join .sg-head h2 { color: #fff; }
+    .sg-join .sg-head .tag { color: rgba(255,255,255,0.8); }
+    .sg-join .sg-head p { color: rgba(255,255,255,0.85); }
+    .sg-interest { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 40px; }
+    .sg-interest-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius-lg); padding: 30px 26px; transition: all var(--transition);
+    }
+    .sg-interest-card:hover { background: rgba(255,255,255,0.12); transform: translateY(-5px); }
+    .sg-interest-card .ic { font-size: 24px; margin-bottom: 16px; color: #fff; }
+    .sg-interest-card h3 { font-size: 18px; color: #fff; margin-bottom: 10px; }
+    .sg-interest-card p { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.65; }
+    .sg-join-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .sg-join .sg-btn-primary { background: #fff; color: var(--signa-blue); }
+    .sg-join .sg-btn-primary:hover { background: var(--signa-soft); }
+    .sg-join .sg-btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
+    .sg-join .sg-btn-ghost:hover { background: #fff; color: var(--signa-blue); }
+
+    /* ---------- Form ---------- */
+    .sg-form-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 50px; align-items: start; }
+    .sg-form-info h3 { font-size: 24px; color: var(--heading-color); margin-bottom: 12px; }
+    .sg-form-info > p { font-size: 15px; color: var(--secondary-text); line-height: 1.7; margin-bottom: 24px; }
+    .sg-form-info .lc { display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start; }
+    .sg-form-info .lc .ic { width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: rgba(47,73,178,0.1); color: var(--signa-blue); }
+    .sg-form-info .lc .k { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--tertiary); }
+    .sg-form-info .lc p { font-size: 14.5px; color: var(--secondary-text); margin: 0; }
+    .sg-form-info .lc a { color: var(--secondary-text); }
+    .sg-form-info .lc a:hover { color: var(--signa-blue); }
+
+    .sg-form { background: var(--signa-tint); border: 1px solid var(--signa-line); border-radius: var(--radius-lg); padding: 32px; }
+    .sg-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .sg-field { margin-bottom: 20px; }
+    .sg-field label { display: block; font-size: 12px; font-weight: 600; color: var(--heading-color); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .sg-field .req { color: #dc2626; }
+    .sg-field input, .sg-field select, .sg-field textarea {
+      width: 100%; padding: 12px 14px; border-radius: var(--radius-sm);
+      background: var(--white); border: 1px solid var(--signa-line);
+      color: var(--body-text); font-family: var(--font-primary); font-size: 14.5px;
+      transition: border-color var(--transition);
+    }
+    .sg-field input:focus, .sg-field select:focus, .sg-field textarea:focus { outline: none; border-color: var(--signa-blue); }
+    .sg-field input::placeholder, .sg-field textarea::placeholder { color: var(--tertiary); }
+    .sg-field textarea { min-height: 100px; resize: vertical; }
+    .sg-field input.invalid, .sg-field select.invalid, .sg-field textarea.invalid { border-color: #dc2626; }
+    .sg-consent { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 22px; font-size: 13.5px; color: var(--secondary-text); line-height: 1.5; }
+    .sg-consent input { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: var(--signa-blue); }
+    .sg-form .sg-btn-primary { width: 100%; justify-content: center; border: none; }
+    .sg-form-note { margin-top: 16px; font-size: 12.5px; color: var(--tertiary); line-height: 1.5; }
+    #sg-status { display: none; margin-bottom: 22px; padding: 14px 16px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 500; }
+    #sg-status.ok { display: block; background: rgba(16,185,129,0.1); color: #047857; border: 1px solid rgba(16,185,129,0.3); }
+    #sg-status.err { display: block; background: rgba(220,38,38,0.08); color: #b91c1c; border: 1px solid rgba(220,38,38,0.3); }
+
+    /* ---------- People ---------- */
+    .sg-people { max-width: 760px; margin: 0 auto; text-align: center; }
+    .sg-people img { display: block; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--signa-line); box-shadow: var(--shadow-lg); }
+    .sg-people-cap { margin-top: 18px; font-size: 14.5px; color: var(--secondary-text); line-height: 1.6; }
+
+    /* ---------- Simple waitlist card ---------- */
+    .sg-waitlist { max-width: 540px; margin: 0 auto; background: var(--white); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-lg); text-align: left; }
+    .sg-join .sg-waitlist .sg-btn-primary { width: 100%; justify-content: center; border: none; background: var(--signa-blue); color: #fff; }
+    .sg-join .sg-waitlist .sg-btn-primary:hover { background: var(--signa-blue-dark); }
+
+    /* ---------- Disclaimer / footer ---------- */
+    .sg-disclaimer-bar { background: var(--signa-tint); border-top: 1px solid var(--signa-line); padding: 40px 0; }
+    .sg-disclaimer { max-width: 920px; margin: 0 auto; text-align: center; font-size: 13.5px; color: var(--secondary-text); line-height: 1.7; }
+    .sg-disclaimer strong { color: var(--heading-color); }
+    .sg-contact-block { text-align: center; margin-bottom: 28px; }
+    .sg-contact-block h3 { font-size: 22px; color: var(--heading-color); margin-bottom: 14px; }
+    .sg-contact-block .links { display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; font-size: 15px; }
+    .sg-contact-block .links a { color: var(--signa-blue); font-weight: 600; }
+
+    .sg-footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); padding: 56px 0 26px; }
+    .sg-footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 36px; }
+    .sg-footer .logo img { height: 32px; filter: brightness(0) invert(1); }
+    .sg-footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 16px; max-width: 340px; }
+    .sg-footer h4 { color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .sg-footer ul { list-style: none; padding: 0; }
+    .sg-footer li { margin-bottom: 10px; }
+    .sg-footer a { font-size: 14px; color: rgba(255,255,255,0.6); }
+    .sg-footer a:hover { color: #fff; }
+    .sg-footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; text-align: center; font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sg-badge .dot, .sg-wave path { animation: none; }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1024px) {
+      .sg-hero-grid { grid-template-columns: 1fr; gap: 44px; }
+      .sg-hero h1 { font-size: 64px; }
+      .sg-cards.cols-4 { grid-template-columns: repeat(2, 1fr); }
+      .sg-approach-grid { grid-template-columns: 1fr; gap: 40px; }
+      .sg-bigstats { grid-template-columns: 1fr; }
+      .sg-roadmap { grid-template-columns: repeat(2, 1fr); }
+      .sg-interest { grid-template-columns: 1fr; }
+      .sg-form-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      .sg-hero { padding: 120px 0 64px; }
+      .sg-hero h1 { font-size: 54px; }
+      .sg-hero .sub { font-size: 19px; }
+      .sg-head h2 { font-size: 28px; }
+      .sg-section { padding: 64px 0; }
+      .sg-cards.cols-4, .sg-cards.cols-3 { grid-template-columns: 1fr; }
+      .sg-benefits { grid-template-columns: 1fr; }
+      .sg-checks { grid-template-columns: 1fr; }
+      .sg-form .row { grid-template-columns: 1fr; }
+      .sg-footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .sg-timeline { flex-direction: column; }
+      .sg-tl-arrow { transform: rotate(90deg); padding: 6px 0; justify-content: center; }
+    }
+  </style>
+</head>
+<body class="signa">
+
+  <!-- Header (matches main site) -->
+  <header class="header">
+    <div class="container">
+      <a href="https://thealphanova.com/" class="logo">
+        <img src="https://thealphanova.com/img/wp/tan-e1764091769895.png" alt="The Alpha Nova">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="https://thealphanova.com/">Home</a></li>
+          <li><a href="https://thealphanova.com/case-studies">Case Studies</a></li>
+          <li><a href="https://thealphanova.com/about">About Us</a></li>
+          <li><a href="/signa">SIGNA</a></li><li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
+          <li><a href="#join" class="nav-cta">Join the Waitlist</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="sg-hero">
+    <div class="container">
+      <div class="sg-hero-grid">
+        <div class="hero-content">
+          <span class="sg-badge"><span class="dot"></span>Research-stage</span>
+          <h1>SIGNA</h1>
+          <p class="sub">Tracking depressive state and treatment response from wearable data.</p>
+          <p class="desc">A research-stage platform exploring how everyday wearable data can support continuous, objective tracking of depression and treatment response between clinical appointments.</p>
+          <div class="sg-hero-actions">
+            <a href="#join" class="sg-btn sg-btn-primary">Join the Waitlist <i class="fas fa-arrow-right"></i></a>
+            <a href="#join" class="sg-btn sg-btn-ghost">Explore Collaboration</a>
+          </div>
+        </div>
+        <div class="sg-hero-visual">
+          <!-- REPLACE: hero device imagery -> img/signa/signa-app.jpg -->
+          <svg class="sg-wave" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 45 L60 45 L75 20 L90 70 L105 30 L120 45 L200 45 L215 25 L230 65 L245 45 L400 45"></path>
+          </svg>
+          <div class="device">
+            <img src="https://thealphanova.com/img/signa/signa-app.jpg" alt="SIGNA patient app concept: continuous depression monitoring from your wrist or through manual entry">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. The Problem -->
+  <section class="sg-section">
+    <div class="container">
+      <div class="sg-head scroll-reveal">
+        <span class="tag">The Problem</span>
+        <h2>Mental health care has a visibility gap.</h2>
+        <p>Mental health assessments often take place weeks or months apart. Important changes in sleep, activity, physiology, symptoms, and treatment response can occur between appointments. By the time these changes are discussed during a clinical appointment, opportunities for earlier support may already have been missed.</p>
+      </div>
+      <div class="sg-stats-row scroll-reveal">
+        <div class="sg-statbox">
+          <div class="v">1&ndash;3 months</div>
+          <div class="k">Typical gap between treatment-response assessments</div>
+        </div>
+        <div class="sg-statbox">
+          <div class="v">~50%</div>
+          <div class="k">Of patients may disengage from treatment over time</div>
+        </div>
+      </div>
+      <div class="sg-callout scroll-reveal">The challenge is not only collecting data. It is understanding meaningful change over time.</div>
+    </div>
+  </section>
+
+  <!-- 3. The Opportunity -->
+  <section class="sg-section tint">
+    <div class="container">
+      <div class="sg-head scroll-reveal">
+        <span class="tag">The Opportunity</span>
+        <h2>Wearables already capture meaningful health signals.</h2>
+        <p>Wearable devices collect health and behavioural data every day. SIGNA explores how these signals may contribute to more continuous and objective monitoring of mental health between clinical assessments.</p>
+      </div>
+      <div class="sg-cards cols-4 scroll-reveal">
+        <div class="sg-card">
+          <div class="ic"><i class="fas fa-heart-pulse"></i></div>
+          <h3>Heart Rate Variability</h3>
+          <p>Patterns in heart rate variability may provide useful physiological context.</p>
+        </div>
+        <div class="sg-card">
+          <div class="ic"><i class="fas fa-moon"></i></div>
+          <h3>Sleep Patterns</h3>
+          <p>Sleep duration, quality, and disruption may reflect important changes over time.</p>
+        </div>
+        <div class="sg-card">
+          <div class="ic"><i class="fas fa-person-walking"></i></div>
+          <h3>Activity Levels</h3>
+          <p>Daily movement and routines can provide additional behavioural signals.</p>
+        </div>
+        <div class="sg-card">
+          <div class="ic"><i class="fas fa-wave-square"></i></div>
+          <h3>Physiological &amp; Behavioural Trends</h3>
+          <p>SIGNA explores patterns across multiple signals rather than relying on a single measure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. The SIGNA Approach -->
+  <section class="sg-section">
+    <div class="container">
+      <div class="sg-head scroll-reveal">
+        <span class="tag">The SIGNA Approach</span>
+        <h2>Continuous insight between appointments.</h2>
+        <p>SIGNA analyzes wearable-derived physiological and behavioural patterns to explore changes associated with depressive states and treatment response. The platform is being developed to generate objective, longitudinal insights that may support more proactive and personalized mental health care.</p>
+      </div>
+      <div class="sg-approach-grid scroll-reveal">
+        <div class="sg-flow">
+          <div class="sg-flow-step"><span class="n">1</span><h4>Wearable Device</h4></div>
+          <span class="sg-flow-connect"></span>
+          <div class="sg-flow-step"><span class="n">2</span><h4>Physiological &amp; Behavioural Signals</h4></div>
+          <span class="sg-flow-connect"></span>
+          <div class="sg-flow-step"><span class="n">3</span><h4>SIGNA Analysis Engine</h4></div>
+          <span class="sg-flow-connect"></span>
+          <div class="sg-flow-step"><span class="n">4</span><h4>Treatment-Response Monitoring</h4></div>
+          <span class="sg-flow-connect"></span>
+          <div class="sg-flow-step"><span class="n">5</span><h4>Clinician Dashboard</h4></div>
+        </div>
+        <div>
+          <!-- REPLACE: clinician dashboard screenshot -> img/signa/signa-dashboard.jpg -->
+          <div class="sg-dash-frame">
+            <img src="https://thealphanova.com/img/signa/signa-dashboard.jpg" alt="SIGNA clinician dashboard concept showing longitudinal trend monitoring over 30 days">
+          </div>
+        </div>
+      </div>
+      <p class="sg-note scroll-reveal">Designed to support clinical monitoring, not replace clinical judgement.</p>
+    </div>
+  </section>
+
+  <!-- 6. Research and Validation -->
+  <section class="sg-section tint">
+    <div class="container">
+      <div class="sg-head scroll-reveal">
+        <span class="tag">Research</span>
+        <h2>Built on early research.</h2>
+        <p>Early findings suggest wearable-derived physiological patterns may help distinguish depressive states from healthy controls, providing a foundation for continued research.</p>
+      </div>
+      <div class="sg-bigstats scroll-reveal">
+        <div class="sg-bigstat"><div class="v">49</div><div class="k">Pilot-study participants</div></div>
+        <div class="sg-bigstat"><div class="v">28</div><div class="k">Days of monitoring</div></div>
+        <div class="sg-bigstat"><div class="v">187</div><div class="k">Physiological features analyzed</div></div>
+      </div>
+      <div class="sg-callout scroll-reveal">SIGNA is still in research and validation. Further work is needed before real-world clinical use.</div>
+    </div>
+  </section>
+
+  <!-- 9. People -->
+  <section class="sg-section">
+    <div class="container">
+      <div class="sg-head scroll-reveal">
+        <span class="tag">The Team</span>
+        <h2>The people behind SIGNA.</h2>
+      </div>
+      <div class="sg-people scroll-reveal">
+        <img src="https://thealphanova.com/img/signa/signa-team.jpg" alt="The SIGNA team at EVOLVED in Toronto">
+        <p class="sg-people-cap">Built by The Alpha Nova, with clinical guidance from Prof. Dr. Steffen Moritz (University of Hamburg).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Join / Waitlist -->
+  <section class="sg-section sg-join" id="join">
+    <!-- anchor target for sendemail.php redirect (#contact) -->
+    <span id="contact" aria-hidden="true"></span>
+    <div class="container">
+      <div class="sg-head scroll-reveal" style="margin-bottom:36px;">
+        <span class="tag">Get Involved</span>
+        <h2>Join the SIGNA waitlist.</h2>
+        <p>Be among the first to hear about SIGNA's progress and early beta access.</p>
+      </div>
+      <!-- Posts to shared sendemail.php (emails info@thealphanova.com) with reCAPTCHA v3.
+           TODO future: dedicated SIGNA endpoint / CRM waitlist integration. -->
+      <form class="sg-waitlist scroll-reveal" id="signa-form" action="https://thealphanova.com/sendemail.php" method="POST" novalidate>
+        <input type="hidden" name="subject" value="SIGNA Waitlist Signup">
+        <input type="hidden" name="message" id="sg-message-combined">
+        <div id="sg-status" role="status" aria-live="polite"></div>
+        <div class="sg-field">
+          <label for="sg-name">Full Name</label>
+          <input type="text" id="sg-name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="sg-field">
+          <label for="sg-email">Email Address</label>
+          <input type="email" id="sg-email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="sg-field">
+          <label for="sg-interest">I'm interested in</label>
+          <select id="sg-interest" name="interest" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Waitlist and early beta access">Waitlist &amp; early beta access</option>
+            <option value="Clinical or research pilot">Clinical or research pilot</option>
+            <option value="Advising or partnership">Advising or partnership</option>
+          </select>
+        </div>
+        <label class="sg-consent">
+          <input type="checkbox" id="sg-consent" required>
+          <span>I agree to receive SIGNA-related updates.</span>
+        </label>
+        <button type="submit" class="sg-btn sg-btn-primary">Join the Waitlist <i class="fas fa-arrow-right"></i></button>
+        <p class="sg-form-note">We respect your privacy. Your details will only be used for SIGNA updates.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 11. Contact block + Final disclaimer -->
+  <section class="sg-disclaimer-bar">
+    <div class="container">
+      <div class="sg-contact-block">
+        <h3>Interested in learning more about SIGNA?</h3>
+        <div class="links">
+          <a href="mailto:info@thealphanova.com"><i class="fas fa-envelope"></i> info@thealphanova.com</a>
+          <a href="tel:+14374245384"><i class="fas fa-phone"></i> +1 437-424-5384</a>
+          <a href="https://thealphanova.com"><i class="fas fa-globe"></i> www.thealphanova.com</a>
+        </div>
+      </div>
+      <p class="sg-disclaimer">
+        <strong>SIGNA is currently under development and is intended for research and future clinical decision-support purposes. It is not intended to diagnose, treat, cure, or prevent any medical condition.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="sg-footer">
+    <div class="container">
+      <div class="sg-footer-grid">
+        <div class="sg-footer-brand">
+          <a href="https://thealphanova.com/" class="logo"><img src="https://thealphanova.com/img/wp/tan-e1764091769895.png" alt="The Alpha Nova"></a>
+          <p>SIGNA is a research-stage digital-health initiative by The Alpha Nova, exploring continuous mental health monitoring from wearable data.</p>
+        </div>
+        <div>
+          <h4>SIGNA</h4>
+          <ul>
+            <li><a href="#join">Join the Waitlist</a></li>
+            <li><a href="mailto:info@thealphanova.com">Get in Touch</a></li>
+            <li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="https://thealphanova.com/">The Alpha Nova</a></li>
+            <li><a href="https://thealphanova.com/about">About</a></li>
+            <li><a href="mailto:info@thealphanova.com">info@thealphanova.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sg-footer-bottom">
+        &copy; 2026 The Alpha Nova. SIGNA is a research-stage initiative. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdZ0yMtAAAAAF8G4TmCFqIJqu-aAGmelVMgbFrE"></script>
+  <script>
+    (function () {
+      var SITEKEY = '6LdZ0yMtAAAAAF8G4TmCFqIJqu-aAGmelVMgbFrE';
+      var form = document.getElementById('signa-form');
+      if (!form) return;
+
+      // reCAPTCHA token holder
+      var rc = document.createElement('input');
+      rc.type = 'hidden'; rc.name = 'g-recaptcha-response';
+      form.appendChild(rc);
+
+      var statusEl = document.getElementById('sg-status');
+      var combined = document.getElementById('sg-message-combined');
+
+      function setInvalid(el, bad) { if (el) el.classList.toggle('invalid', !!bad); }
+      function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+      function validate() {
+        var ok = true;
+        var name = document.getElementById('sg-name');
+        var email = document.getElementById('sg-email');
+        var interest = document.getElementById('sg-interest');
+        var consent = document.getElementById('sg-consent');
+        setInvalid(name, !name.value.trim()); if (!name.value.trim()) ok = false;
+        var emailBad = !isEmail(email.value.trim()); setInvalid(email, emailBad); if (emailBad) ok = false;
+        setInvalid(interest, !interest.value); if (!interest.value) ok = false;
+        if (!consent.checked) { ok = false; statusEl.className = 'err'; statusEl.textContent = 'Please agree to receive SIGNA-related communication to continue.'; }
+        return ok;
+      }
+
+      // Compose the email body from the simple waitlist fields
+      function buildMessage() {
+        var interest = document.getElementById('sg-interest').value;
+        combined.value = 'Interest: ' + interest + '\nConsent to contact: Yes\nSource: SIGNA waitlist form';
+      }
+
+      form.addEventListener('submit', function (e) {
+        if (form.dataset.rcDone === '1') return; // allow the real submit through
+        e.preventDefault();
+        statusEl.className = ''; statusEl.textContent = '';
+        if (!validate()) {
+          if (statusEl.textContent === '') { statusEl.className = 'err'; statusEl.textContent = 'Please complete the required fields.'; }
+          statusEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+        buildMessage();
+        grecaptcha.ready(function () {
+          grecaptcha.execute(SITEKEY, { action: 'submit' }).then(function (token) {
+            rc.value = token;
+            form.dataset.rcDone = '1';
+            form.submit();
+          });
+        });
+      });
+
+      // Show success / error state after redirect from sendemail.php
+      var params = new URLSearchParams(window.location.search);
+      var status = params.get('status');
+      if (status) {
+        if (status === 'success') {
+          statusEl.className = 'ok';
+          statusEl.textContent = 'Thank you for your interest in SIGNA. We will be in touch soon.';
+        } else if (status === 'captcha') {
+          statusEl.className = 'err';
+          statusEl.textContent = 'We could not verify your submission. Please try again.';
+        } else {
+          statusEl.className = 'err';
+          statusEl.textContent = 'Something went wrong. Please email info@thealphanova.com and we will follow up.';
+        }
+        document.getElementById('sg-form').scrollIntoView({ behavior: 'smooth' });
+      }
+    })();
+  </script>
+  <script src="https://thealphanova.com/js/main.js"></script>
+</body>
+</html>

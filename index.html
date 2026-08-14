@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
+<head><meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software Development Sudbury | Custom Apps & AI Solutions | The Alpha Nova</title>
   <meta name="description" content="Sudbury-based software development company specializing in custom mobile apps, web development, AI solutions, and enterprise software. Serving Northern Ontario businesses with world-class technology.">
-  <meta name="keywords" content="software development Sudbury, app development Sudbury, web development Northern Ontario, AI solutions Sudbury, custom software Greater Sudbury, tech company Sudbury Ontario"
+  <meta name="keywords" content="software development Sudbury, app development Sudbury, web development Northern Ontario, AI solutions Sudbury, custom software Greater Sudbury, tech company Sudbury Ontario">
   <meta name="author" content="The Alpha Nova">
   <link rel="canonical" href="https://thealphanova.com/">
   <!-- Open Graph -->
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260717b">
   <style>
     .labs-promo { grid-template-columns: 1.4fr 1fr; }
     .labs-promo-chip { display:flex; align-items:center; gap:10px; padding:14px 18px; border-radius:12px; background:rgba(255,255,255,0.04); border:1px solid rgba(168,184,232,0.18); color:#c4cee0; font-size:14px; font-weight:600; }
@@ -36,6 +36,19 @@
     /* Homepage featured case studies: 3-up row */
     .featured-grid { grid-template-columns: repeat(3, 1fr); }
     @media (max-width: 980px) { .featured-grid { grid-template-columns: 1fr; } }
+
+    /* Hero scroll cue */
+    .hero-scroll-cue {
+      position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      color: var(--light-gray, #98A2B3); text-decoration: none; font-size: 12px;
+      letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
+      opacity: 0.75; transition: opacity 0.2s ease; animation: heroBob 2s ease-in-out infinite;
+    }
+    .hero-scroll-cue:hover { opacity: 1; color: var(--accent, #384fa2); }
+    .hero-scroll-cue i { font-size: 14px; }
+    @keyframes heroBob { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+    @media (max-width: 768px) { .hero-scroll-cue { display: none; } }
   </style>
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -102,7 +115,7 @@
         "name": "What software development services does The Alpha Nova offer in Sudbury?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Alpha Nova offers comprehensive software development services in Sudbury including custom mobile app development, web application development, AI and machine learning solutions, database engineering, UI/UX design, and enterprise software development. We serve clients across Northern Ontario and globally."
+          "text": "The Alpha Nova offers comprehensive software development services in Sudbury including custom mobile app development, web application development, AI and machine learning solutions, database engineering, UI/UX design, and enterprise software development. We serve clients across Northern Ontario and Canada."
         }
       },
       {
@@ -110,7 +123,7 @@
         "name": "Where is The Alpha Nova located in Sudbury?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Alpha Nova is headquartered at 1545 Maley Drive in Greater Sudbury, Ontario. Our Sudbury office serves as the hub for our North American operations, with additional offices in Passau, Germany and Colombo, Sri Lanka."
+          "text": "The Alpha Nova is headquartered at 1545 Maley Drive in Greater Sudbury, Ontario. Our Sudbury office is the home base for everything we design, build, and ship as a proudly Canadian company."
         }
       },
       {
@@ -171,7 +184,7 @@
           <li><a href="/" class="active">Home</a></li>
           <li><a href="/case-studies">Case Studies</a></li>
           <li><a href="/about">About Us</a></li>
-          <li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
+          <li><a href="/signa">SIGNA</a></li><li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
           <li><a href="#contact" class="nav-cta">Contact Us</a></li>
         </ul>
       </nav>
@@ -186,22 +199,26 @@
     <div class="container hero-split">
       <div class="hero-content">
         <h1>Build the <span class="typed-wrapper"><span class="typed-text"></span></span> with<br><span class="highlight">Intelligent Software</span></h1>
-        <p>Your global partner for intelligent software, AI solutions, and product innovation. From concept to launch, we deliver digital products that drive real results.</p>
+        <p>Your Canadian partner for intelligent software, AI solutions, and product innovation. From concept to launch, we deliver digital products that drive real results.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary">Start Your Project <i class="fas fa-arrow-right"></i></a>
           <a href="/case-studies" class="btn btn-secondary">View Our Work</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="images/map.png" alt="Global Presence">
+        <img src="img/team-meeting.png" alt="The Alpha Nova team collaborating at our Greater Sudbury office">
       </div>
     </div>
+    <a href="#explore" class="hero-scroll-cue" aria-label="Scroll to see more">
+      <span class="hero-scroll-text">Explore</span>
+      <i class="fas fa-chevron-down"></i>
+    </a>
   </section>
 
   <!-- Trust Logos -->
-  <section class="trust-section">
+  <section class="trust-section" id="explore">
     <div class="container">
-      <p class="label scroll-reveal">Trusted by innovative companies worldwide</p>
+      <p class="label scroll-reveal">Trusted by innovative organizations</p>
       <div class="trust-logos">
         <div class="trust-logos-track">
           <img src="img/wp/Woblu-logo-2-scaled.png" alt="Woblu">
@@ -228,12 +245,12 @@
     <div class="container">
       <div class="about-preview">
         <div class="about-preview-image scroll-reveal">
-          <img src="img/wp/alphanova-1024x768.jpg" alt="The Alpha Nova Team">
+          <img src="img/pitch-win.png" alt="The Alpha Nova team winning the Sudbury Business Pitch Challenge">
         </div>
         <div class="about-preview-content scroll-reveal scroll-reveal-delay-2">
           <span class="section-label">Who We Are</span>
-          <h2>A Global Team That Delivers</h2>
-          <p>We're a tri-continental software company with offices in Canada, Germany, and Sri Lanka. Our diverse team combines local insight with global expertise to build products that make a difference.</p>
+          <h2>A Canadian Team That Delivers</h2>
+          <p>We're a Canadian software company headquartered in Greater Sudbury, Ontario. Our diverse team combines deep technical expertise with real domain understanding to build products that make a difference.</p>
           <p>From AI-powered platforms to enterprise applications, we bring your vision to life with cutting-edge technology and battle-tested processes.</p>
           <a href="/about" class="btn btn-outline">Learn More About Us <i class="fas fa-arrow-right"></i></a>
         </div>
@@ -300,7 +317,7 @@
         <div class="pillar-card">
           <div class="pillar-icon green"><i class="fas fa-people-carry-box"></i></div>
           <h3>Collaborative Teams</h3>
-          <p>Cross-functional teams across three continents working together to deliver exceptional results.</p>
+          <p>Cross-functional teams working together to deliver exceptional results.</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon amber"><i class="fas fa-layer-group"></i></div>
@@ -416,10 +433,10 @@
             <h4>Outstanding healthcare platform delivery</h4>
             <p>The Alpha Nova team delivered exceptional work on our COGITO app. Their understanding of complex healthcare requirements and ability to translate them into engaging gamified experiences was outstanding. We wouldn't be where we are today without them.</p>
             <div class="testimonial-author">
-              <img src="img/wp/Steffen_Moritz-e1764169958116-1.png" alt="Steffen Moritz">
+              <img src="img/wp/Steffen_Moritz-e1764169958116-1.png" alt="Prof. Steffen Moritz">
               <div class="testimonial-author-info">
                 <h4>Prof. Steffen Moritz</h4>
-                <p>UKE Hamburg</p>
+                <p>University Medical Center Hamburg-Eppendorf (UKE)</p>
               </div>
             </div>
           </div>
@@ -444,6 +461,17 @@
               <div class="testimonial-author-info">
                 <h4>Abdulelah Almutairi</h4>
                 <p>Aviation Executive</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card-v">
+            <h4>A practical, engaging platform our alumni love</h4>
+            <p>What began as a student capstone project grew into a practical, engaging platform that helps our alumni stay connected with their college community. The team demonstrated creativity, strong technical ability and a genuine commitment to understanding our goals - and the determination to see the project through to completion.</p>
+            <div class="testimonial-author">
+              <img src="img/brandi-braithwaite.jpg" alt="Brandi Braithwaite">
+              <div class="testimonial-author-info">
+                <h4>Brandi Braithwaite</h4>
+                <p>Director, Alumni &amp; Development, Cambrian College</p>
               </div>
             </div>
           </div>
@@ -511,11 +539,11 @@
       <div style="max-width: 800px; margin: 0 auto;">
         <div style="background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 16px; border: 1px solid #e5e7eb;">
           <h3 style="font-size: 18px; margin-bottom: 12px; color: #111827;">What software development services does The Alpha Nova offer in Sudbury?</h3>
-          <p style="color: #475467; line-height: 1.7;">The Alpha Nova offers comprehensive software development services in Sudbury including custom mobile app development, web application development, AI and machine learning solutions, database engineering, UI/UX design, and enterprise software development. We serve clients across Northern Ontario and globally.</p>
+          <p style="color: #475467; line-height: 1.7;">The Alpha Nova offers comprehensive software development services in Sudbury including custom mobile app development, web application development, AI and machine learning solutions, database engineering, UI/UX design, and enterprise software development. We serve clients across Northern Ontario and Canada.</p>
         </div>
         <div style="background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 16px; border: 1px solid #e5e7eb;">
           <h3 style="font-size: 18px; margin-bottom: 12px; color: #111827;">Where is The Alpha Nova located in Sudbury?</h3>
-          <p style="color: #475467; line-height: 1.7;">The Alpha Nova is headquartered at 1545 Maley Drive in Greater Sudbury, Ontario. Our Sudbury office serves as the hub for our North American operations, with additional offices in Passau, Germany and Colombo, Sri Lanka.</p>
+          <p style="color: #475467; line-height: 1.7;">The Alpha Nova is headquartered at 1545 Maley Drive in Greater Sudbury, Ontario. Our Sudbury office is the home base for everything we design, build, and ship as a proudly Canadian company.</p>
         </div>
         <div style="background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 16px; border: 1px solid #e5e7eb;">
           <h3 style="font-size: 18px; margin-bottom: 12px; color: #111827;">How much does custom software development cost in Sudbury?</h3>
@@ -615,9 +643,9 @@
           <a href="/" class="logo">
             <img src="img/wp/tan-e1764091769895.png" alt="The Alpha Nova">
           </a>
-          <p>Your global partner for intelligent software, AI solutions, and product innovation.</p>
+          <p>Your Canadian partner for intelligent software, AI solutions, and product innovation.</p>
           <p style="margin-top: 12px; font-size: 13px;">
-            &#127464;&#127462; Canada &nbsp;&middot;&nbsp; &#127465;&#127466; Germany &nbsp;&middot;&nbsp; &#127473;&#127472; Sri Lanka
+            &#127464;&#127462; Proudly built in Canada
           </p>
         </div>
         <div>

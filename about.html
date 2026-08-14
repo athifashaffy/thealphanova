@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - The Alpha Nova</title>
-  <meta name="description" content="Meet The Alpha Nova team - engineers, designers, and strategists building digital products across Canada, Germany, and Sri Lanka.">
-  <meta name="keywords" content="about The Alpha Nova, software team, global development team, Sudbury Canada, Germany, Sri Lanka, tech company">
+  <title>About The Alpha Nova | Canadian Software &amp; AI Company in Sudbury</title>
+  <meta name="description" content="Meet The Alpha Nova team - a Canadian company of engineers, designers, and strategists building intelligent software, AI, and defence-tech from Greater Sudbury, Ontario.">
+  <meta name="keywords" content="about The Alpha Nova, Canadian software company, Sudbury Ontario, software team, AI development Canada, defence tech Canada, tech company">
   <meta name="author" content="The Alpha Nova">
   <link rel="canonical" href="https://thealphanova.com/about">
   <!-- Open Graph -->
   <meta property="og:title" content="About Us - The Alpha Nova">
-  <meta property="og:description" content="A passionate team of engineers, designers, and strategists building the future of digital products across three continents.">
+  <meta property="og:description" content="A Canadian team of engineers, designers, and strategists building the future of intelligent digital products from Greater Sudbury, Ontario.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thealphanova.com/about">
   <meta property="og:image" content="https://thealphanova.com/img/wp/alphanova-1024x768.jpg">
@@ -18,14 +18,14 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Us - The Alpha Nova">
-  <meta name="twitter:description" content="A passionate team of engineers, designers, and strategists building the future of digital products across three continents.">
+  <meta name="twitter:description" content="A Canadian team of engineers, designers, and strategists building the future of intelligent digital products from Greater Sudbury, Ontario.">
   <meta name="twitter:image" content="https://thealphanova.com/img/wp/alphanova-1024x768.jpg">
   <link rel="icon" href="img/wp/cropped-fav-32x32.jpg" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260717b">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQY5692DSS"></script>
   <script>
@@ -61,6 +61,19 @@
     .loc-card .loc-role { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
     .loc-card p { font-size: 14px; color: var(--light-gray); line-height: 1.6; }
 
+    /* Headquarters card (single-location) */
+    .hq-card { display: grid; grid-template-columns: 1.05fr 1fr; max-width: 940px; margin: 0 auto; background: var(--white); border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .hq-map { min-height: 320px; }
+    .hq-map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; filter: grayscale(0.15); }
+    .hq-info { padding: 44px 44px; display: flex; flex-direction: column; justify-content: center; text-align: left; }
+    .hq-info .loc-flag { font-size: 44px; margin-bottom: 14px; }
+    .hq-info h3 { font-size: 26px; margin-bottom: 4px; }
+    .hq-info .loc-role { font-size: 13px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 16px; }
+    .hq-info > p { font-size: 15px; color: var(--light-gray); line-height: 1.75; margin-bottom: 22px; }
+    .hq-link { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 600; font-size: 15px; text-decoration: none; transition: gap 0.2s ease; }
+    .hq-link:hover { gap: 12px; }
+    @media (max-width: 768px) { .hq-card { grid-template-columns: 1fr; } .hq-info { padding: 32px 26px; text-align: center; align-items: center; } .hq-map { order: -1; } }
+
     /* Team card enhancements */
     .team-card .team-bio { font-size: 13.5px; color: var(--light-gray); line-height: 1.65; margin-top: 12px; }
     .team-avatar {
@@ -69,6 +82,8 @@
       font-family: var(--font-heading); font-weight: 800; font-size: 34px; color: #fff;
       background: linear-gradient(135deg, #384fa2, #5b78d6);
     }
+    .team-card { display: flex; flex-direction: column; }
+    .team-card .team-social { margin-top: auto; padding-top: 16px; }
     .team-social { margin-top: 16px; display: flex; justify-content: center; gap: 10px; }
     .team-social a {
       width: 34px; height: 34px; border-radius: 50%;
@@ -114,7 +129,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="/case-studies">Case Studies</a></li>
           <li><a href="/about" class="active">About Us</a></li>
-          <li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
+          <li><a href="/signa">SIGNA</a></li><li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
           <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
         </ul>
       </nav>
@@ -129,7 +144,7 @@
     <div class="container">
       <span class="section-label">About Us</span>
       <h1>Meet the People Who<br>Get Stuff Done</h1>
-      <p>A passionate team of engineers, designers, and strategists building the future of digital products across three continents.</p>
+      <p>A Canadian team of engineers, designers, and strategists building the future of intelligent digital products from Greater Sudbury, Ontario.</p>
     </div>
   </section>
 
@@ -150,15 +165,15 @@
       </div>
       <div id="tab-mission" class="tab-content active">
         <h3>Our Mission</h3>
-        <p>To empower businesses worldwide with intelligent, scalable software solutions that drive measurable impact. We combine cutting-edge technology with deep domain expertise to transform complex challenges into elegant digital products that get stuff done.</p>
+        <p>To empower businesses with intelligent, scalable software solutions that drive measurable impact. We combine cutting-edge technology with deep domain expertise to transform complex challenges into elegant digital products that get stuff done.</p>
       </div>
       <div id="tab-about" class="tab-content">
         <h3>Who We Are</h3>
-        <p>The Alpha Nova is a global software development company with offices in Greater Sudbury (Canada), Passau (Germany), and Colombo (Sri Lanka). Founded with a passion for building products that matter, we've grown into a diverse team of engineers, designers, and strategists serving clients across healthcare, aviation, education, and enterprise industries. Our tri-continental presence gives us the unique ability to deliver round-the-clock development with local market understanding.</p>
+        <p>The Alpha Nova is a Canadian software development company headquartered in Greater Sudbury, Ontario. Founded with a passion for building products that matter, we've grown into a diverse team of engineers, designers, and strategists serving clients across healthcare, aviation, mining, defence, education, and enterprise industries. Our focus on ownership and craft lets us deliver reliable, high-stakes software with real domain understanding.</p>
       </div>
       <div id="tab-vision" class="tab-content">
         <h3>Our Vision</h3>
-        <p>To become the most trusted global partner for intelligent software solutions, where innovation meets reliability. We envision a world where every business, regardless of size, has access to world-class digital products that accelerate their growth and amplify their impact.</p>
+        <p>To become Canada's most trusted partner for intelligent software solutions, where innovation meets reliability. We envision a world where every business, regardless of size, has access to world-class digital products that accelerate their growth and amplify their impact.</p>
       </div>
     </div>
   </section>
@@ -169,7 +184,7 @@
       <div class="section-header">
         <span class="section-label">Our Team</span>
         <h2>The People Behind the Products</h2>
-        <p>A diverse, passionate team working across three continents to bring your vision to life.</p>
+        <p>A diverse, passionate team building from Canada to bring your vision to life.</p>
       </div>
 
       <h3 class="team-subhead">Leadership &amp; Strategy</h3>
@@ -188,8 +203,7 @@
           <img src="img/wp/Frame-17.png" alt="Dr. Markus Lehmann">
           <h3>Dr. Markus Lehmann</h3>
           <p class="role">Strategic Advisor</p>
-          <p class="location">Passau, Germany</p>
-          <p class="team-bio">Markus advises on technology strategy and enterprise architecture, and leads our Germany and Sri Lanka operations, bringing deep industry experience to our most complex engagements.</p>
+          <p class="team-bio">Markus advises on technology strategy and enterprise architecture, bringing deep industry experience to our most complex engagements.</p>
           <div class="team-social">
             <a href="https://www.linkedin.com/in/dr-markus-lehmann/" target="_blank" rel="noopener" aria-label="Dr. Markus Lehmann on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
@@ -198,7 +212,6 @@
           <img src="img/steffen.jpg" alt="Prof. Dr. Steffen Moritz">
           <h3>Prof. Dr. Steffen Moritz</h3>
           <p class="role">Lead Scientific Advisor</p>
-          <p class="location">Hamburg, Germany</p>
           <p class="team-bio">Head of the Clinical Neuropsychology Working Group in the Department of Psychiatry and Psychotherapy at the University Medical Center Hamburg-Eppendorf (UKE), and Professor of Clinical Psychology. As a lead advisor to The Alpha Nova, Prof. Moritz collaborated with our team on the COGITO app, bringing world-class clinical research expertise to our healthcare work.</p>
           <div class="team-social">
             <a href="https://www.linkedin.com/in/steffen-moritz-clinical-neuropsychology-unit-uke/" target="_blank" rel="noopener" aria-label="Prof. Dr. Steffen Moritz on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -266,10 +279,10 @@
       <div class="story-grid scroll-reveal">
         <div class="story-text">
           <span class="section-label">Our Story</span>
-          <h2>From a Shared Idea to a Global Team</h2>
-          <p>The Alpha Nova began with a simple conviction: that great software should be accessible, dependable, and genuinely useful. What started as a small group of engineers and builders has grown into a tri-continental company united by a single standard - get stuff done, and get it done well.</p>
-          <p>Headquartered in Greater Sudbury, Ontario, with teams in Passau, Germany and Colombo, Sri Lanka, we've delivered products across healthcare, aviation, mining, education, transportation, and enterprise. From an award-winning AI model for open-pit mining analysis to a gamified mental-health app built with a leading university hospital, our work spans industries - but the approach never changes.</p>
-          <p>We treat every engagement as our own product. We obsess over the details, communicate openly, and measure ourselves by the impact we create for our clients. That's how a shared idea became a team that companies around the world trust to build what matters.</p>
+          <h2>From a Shared Idea to a Canadian Team</h2>
+          <p>The Alpha Nova began with a simple conviction: that great software should be accessible, dependable, and genuinely useful. What started as a small group of engineers and builders has grown into a Canadian company united by a single standard - get stuff done, and get it done well.</p>
+          <p>Headquartered in Greater Sudbury, Ontario, we've delivered products across healthcare, aviation, mining, defence, education, transportation, and enterprise. From an award-winning AI model for open-pit mining analysis to a gamified mental-health app built with a leading university hospital, our work spans industries - but the approach never changes.</p>
+          <p>We treat every engagement as our own product. We obsess over the details, communicate openly, and measure ourselves by the impact we create for our clients. That's how a shared idea became a team that companies trust to build what matters.</p>
         </div>
         <div class="story-img">
           <img src="img/wp/INTRODUCING-The-AlphanovA-6-1024x576.jpg" alt="The Alpha Nova Story">
@@ -292,8 +305,8 @@
           <p>Projects Completed</p>
         </div>
         <div class="metric-item">
-          <h3><span data-count="3" data-suffix="">0</span></h3>
-          <p>Continents</p>
+          <h3><span data-count="7" data-suffix="+">0+</span></h3>
+          <p>Industries Served</p>
         </div>
         <div class="metric-item">
           <h3><span data-count="98" data-suffix="%">0%</span></h3>
@@ -378,7 +391,7 @@
         <div class="pillar-card">
           <div class="pillar-icon blue"><i class="fas fa-people-group"></i></div>
           <h3>Collaboration</h3>
-          <p>Cross-functional teams across three continents working as one toward a shared goal.</p>
+          <p>Cross-functional teams working as one toward a shared goal.</p>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon green"><i class="fas fa-bullseye"></i></div>
@@ -444,27 +457,19 @@
     <div class="container">
       <div class="section-header">
         <span class="section-label">Where We Are</span>
-        <h2>One Team, Three Continents</h2>
-        <p>Local presence and global reach - delivering round-the-clock with real market understanding.</p>
+        <h2>Proudly Based in Canada</h2>
+        <p>Rooted in Greater Sudbury, Ontario, and building for clients across Canada and beyond.</p>
       </div>
-      <div class="loc-grid scroll-reveal">
-        <div class="loc-card">
+      <div class="hq-card scroll-reveal">
+        <div class="hq-map">
+          <iframe src="https://maps.google.com/maps?q=1545%20Maley%20Dr%2C%20Greater%20Sudbury%2C%20ON%20P3A%203V8%2C%20Canada&t=m&z=14&output=embed&iwloc=near" loading="lazy" title="The Alpha Nova headquarters, Greater Sudbury" allowfullscreen></iframe>
+        </div>
+        <div class="hq-info">
           <div class="loc-flag">&#127464;&#127462;</div>
           <h3>Greater Sudbury</h3>
-          <p class="loc-role">Canada - Headquarters</p>
-          <p>1545 Maley Drive, Greater Sudbury, Ontario. The hub for our North American operations.</p>
-        </div>
-        <div class="loc-card">
-          <div class="loc-flag">&#127465;&#127466;</div>
-          <h3>Passau</h3>
-          <p class="loc-role">Germany - Engineering &amp; Strategy</p>
-          <p>Our European base, anchoring research partnerships and enterprise engagements.</p>
-        </div>
-        <div class="loc-card">
-          <div class="loc-flag">&#127473;&#127472;</div>
-          <h3>Colombo</h3>
-          <p class="loc-role">Sri Lanka - Development</p>
-          <p>A core development center extending our delivery capacity across time zones.</p>
+          <p class="loc-role">Ontario, Canada &middot; Headquarters</p>
+          <p>1545 Maley Drive, Greater Sudbury, Ontario, P3A 4R7. The home base for everything we design, build, and ship.</p>
+          <a class="hq-link" href="https://maps.google.com/?q=1545+Maley+Drive+Greater+Sudbury+ON" target="_blank" rel="noopener">Get directions <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -492,9 +497,9 @@
           <a href="/" class="logo">
             <img src="img/wp/tan-e1764091769895.png" alt="The Alpha Nova">
           </a>
-          <p>Your global partner for intelligent software, AI solutions, and product innovation.</p>
+          <p>Your Canadian partner for intelligent software, AI solutions, and product innovation.</p>
           <p style="margin-top: 12px; font-size: 13px;">
-            &#127464;&#127462; Canada &nbsp;&middot;&nbsp; &#127465;&#127466; Germany &nbsp;&middot;&nbsp; &#127473;&#127472; Sri Lanka
+            &#127464;&#127462; Proudly built in Canada
           </p>
         </div>
         <div>
