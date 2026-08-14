@@ -2574,3 +2574,72 @@ h1, h2, h3, h4, h5, h6 {
   .flow-arrow { transform: rotate(90deg); }
   .sector-chip { font-size: 12.5px; }
 }
+
+/* ── Mobile navigation ───────────────────────────────────────────────
+   The open menu was a translucent panel that let the hero text show
+   through, and the Products dropdown kept its desktop position:absolute
+   so it floated outside the panel instead of expanding inline. Here it
+   becomes a solid, full-width list with the dropdown as an accordion. */
+@media (max-width: 768px) {
+  .nav-links.open {
+    background: var(--white);
+    padding: 8px 0 20px;
+    gap: 0;
+    align-items: stretch;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    border-top: 1px solid var(--border-light);
+  }
+  .nav-links.open > li { width: 100%; }
+  .nav-links.open > li > a {
+    display: block;
+    padding: 15px 22px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(16, 24, 40, 0.07);
+  }
+  .nav-links.open > li > a.active { color: var(--accent); }
+
+  /* Book a Call reads as the action, not another list row */
+  .nav-links.open .nav-cta {
+    margin: 18px 22px 0;
+    text-align: center;
+    border-bottom: none !important;
+    padding: 13px 24px !important;
+  }
+
+  /* Products: inline accordion rather than a floating dropdown */
+  .nav-links.open .nav-drop-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links.open .nav-dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: var(--light-bg);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .nav-links.open .nav-dropdown.open .nav-dropdown-menu { display: block; }
+  .nav-links.open .nav-dropdown-menu a {
+    padding: 13px 22px 13px 40px;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(16, 24, 40, 0.05);
+    font-size: 15px;
+  }
+}
+
+/* Tablet: seven nav items at 32px gaps crowd the logo before the
+   hamburger takes over at 768px. */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .nav-links { gap: 20px; }
+  .nav-links a { font-size: 14.5px; }
+}
