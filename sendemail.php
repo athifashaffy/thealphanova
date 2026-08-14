@@ -17,11 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // lives only on the server. It used to be hardcoded here — in a public
     // repository — which burned the previous key. Do not put it back.
     $recaptchaSecret = '';
-    $cfgPath = __DIR__ . '/recaptcha-config.php';
-    if (is_readable($cfgPath)) {
-        $cfg = include $cfgPath;
-        if (is_array($cfg) && !empty($cfg['secret'])) {
-            $recaptchaSecret = $cfg['secret'];
+    $envPath = __DIR__ . '/.env';
+    if (is_readable($envPath)) {
+        foreach (file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+            $line = trim($line);
+            if ($line === '' || $line[0] === '#' || strpos($line, '=') === false) { continue; }
+            [$k, $v] = explode('=', $line, 2);
+            if (trim($k) === 'RECAPTCHA_SECRET') {
+                $recaptchaSecret = trim($v, " \t\"'");
+                break;
+            }
         }
     }
     if ($recaptchaSecret === '' && getenv('RECAPTCHA_SECRET')) {
