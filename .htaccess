@@ -1,13 +1,18 @@
 # Static site configuration
 Options -Indexes
 
-# Never serve dotfiles or secret stores over HTTP. Without this, .env sitting
-# in the document root is fetchable at https://thealphanova.com/.env
-<FilesMatch "^\.(env|git.*|htpasswd)|\.(env|bak|sample|log)$">
+# Never serve dotfiles, secret stores or backup copies over HTTP.
+#
+# Two things this stops. A .env in the document root is fetchable at
+# /.env by default. And a backup like sendemail.php.bak-20260814 is served
+# as PLAIN TEXT rather than executed — which publishes whatever secret the
+# original file contained. Note the trailing .* on the backup suffixes:
+# a bare "\.bak$" does not match "sendemail.php.bak-20260814".
+<FilesMatch "(^\.|\.(env|bak|backup|old|orig|save|swp|sample|dist|log|sql|ini)([.\-~].*)?$)">
   Require all denied
 </FilesMatch>
 <IfModule !mod_authz_core.c>
-  <FilesMatch "^\.(env|git.*|htpasswd)|\.(env|bak|sample|log)$">
+  <FilesMatch "(^\.|\.(env|bak|backup|old|orig|save|swp|sample|dist|log|sql|ini)([.\-~].*)?$)">
     Order allow,deny
     Deny from all
   </FilesMatch>

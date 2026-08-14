@@ -2557,3 +2557,20 @@ h1, h2, h3, h4, h5, h6 {
 .grant-badge { margin-top: 22px; }
 .grant-badge img { width: 190px; max-width: 100%; height: auto; opacity: 0.9; transition: opacity var(--transition); }
 .grant-badge img:hover { opacity: 1; }
+
+/* ── Mobile fixes ────────────────────────────────────────────────────
+   These replace inline grid-template-columns on the markup. An inline
+   style beats any media query, so a hardcoded repeat(2,1fr) stayed
+   two-up on a phone and crushed the cards. Modifier classes instead. */
+.cap-grid-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) { .cap-grid-2 { grid-template-columns: 1fr; } }
+
+/* The Sensors -> Edge -> AI -> Software -> Decision pipeline reads as a
+   row on desktop. On a phone it becomes a vertical stack rather than a
+   sideways scroll nobody discovers. */
+@media (max-width: 640px) {
+  .flow { flex-direction: column; overflow-x: visible; gap: 4px; }
+  .flow-step { width: 100%; max-width: 240px; }
+  .flow-arrow { transform: rotate(90deg); }
+  .sector-chip { font-size: 12.5px; }
+}
