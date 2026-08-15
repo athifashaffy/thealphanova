@@ -2471,7 +2471,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========================================
    Technology-company positioning:
-   brand strip, capability triad, industrial flow, products
+   brand strip, industrial flow, products
    ======================================== */
 
 /* ── "AI. Software. IoT. One Technology Partner." ── */
@@ -2491,23 +2491,6 @@ h1, h2, h3, h4, h5, h6 {
 .brand-strip .sep { color: var(--accent); margin: 0 2px; }
 @media (max-width: 768px) { .brand-strip p { font-size: 16px; } }
 
-/* ── See further / Know more / Operate anywhere ── */
-.triad-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.triad-item { text-align: center; }
-.triad-item .triad-icon {
-  width: 54px; height: 54px; margin: 0 auto 18px;
-  border-radius: 50%; display: grid; place-items: center;
-  background: rgba(56, 79, 162, 0.1); color: var(--accent); font-size: 21px;
-}
-.triad-item h3 {
-  font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase;
-  margin-bottom: 10px; color: var(--heading-color);
-}
-.triad-item p {
-  color: var(--secondary-text); font-size: 15px; line-height: 1.75;
-  max-width: 300px; margin: 0 auto;
-}
-@media (max-width: 900px) { .triad-grid { grid-template-columns: 1fr; } }
 
 /* ── Industrial pipeline: Sensors -> Edge -> AI -> Software -> Decision ── */
 .flow {
