@@ -1,3 +1,6 @@
 
 # Server-side secrets — never commit (the repo is public)
 .env
+
+# python bytecode from ops/ generators
+__pycache__/
