@@ -53,7 +53,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TechnologyCompany",
+    "@type": ["Organization", "LocalBusiness", "ProfessionalService", "TechnologyCompany"],
     "@id": "https://thealphanova.com",
     "name": "The Alpha Nova",
     "alternateName": "TAN",
@@ -103,6 +103,46 @@
     ],
     "priceRange": "$$",
     "openingHours": "Mo-Fr 09:00-17:00"
+  }
+  </script>
+
+  <!-- COGITO AI Product Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "COGITO AI",
+    "url": "https://thealphanova.com/cogito-ai",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": ["iOS", "Android"],
+    "description": "An on-device wellbeing companion for the UKE Hamburg COGITO exercise library. Privacy-first AI that helps users navigate evidence-based mental health exercises without sending personal data to external servers. Not a therapist, not diagnosis, not therapy.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "The Alpha Nova",
+      "url": "https://thealphanova.com"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "University Medical Center Hamburg-Eppendorf",
+      "alternateName": "UKE Hamburg"
+    },
+    "featureList": [
+      "On-device AI processing",
+      "Privacy-first architecture",
+      "No personal data collection",
+      "Personalized exercise recommendations",
+      "Multilingual support",
+      "Offline capability"
+    ],
+    "softwareHelp": {
+      "@type": "WebPage",
+      "url": "https://thealphanova.com/case-cogito"
+    }
   }
   </script>
 
@@ -788,6 +828,7 @@
             <li><a href="/industries">Industries</a></li>
             <li><a href="/products">Products</a></li>
             <li><a href="https://labs.thealphanova.com/">AN Labs</a></li>
+            <li><a href="/public-sector">Public Sector</a></li>
             <li><a href="/software-development-sudbury">Software Development Sudbury</a></li>
             <li><a href="/book">Book a Call</a></li>
           </ul>
