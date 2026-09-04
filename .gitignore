@@ -7,3 +7,6 @@ __pycache__/
 
 # local browser traces from cloud agents
 .playwright-mcp/
+
+# Bid drafts with prices and client contacts. Public repo. Keep them in Drive.
+ops/rfp-workflow/review-pack/
