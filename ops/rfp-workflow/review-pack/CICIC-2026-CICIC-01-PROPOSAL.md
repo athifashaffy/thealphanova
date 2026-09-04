@@ -16,34 +16,34 @@ A bundled, bilingual CRM, website chatbot, and telephone callbot that answer onl
 
 ### SUBMITTED TO
 
-The Corporation of the Council of Ministers of Education, Canada (CCMEC)  
-Owner: Canadian Information Centre for International Credentials (CICIC)  
-Attention: Michael Ringuette, Coordinator, CICIC  
-95 St. Clair Avenue West, Suite 1106  
-Toronto ON M4V 1N6  
+The Corporation of the Council of Ministers of Education, Canada (CCMEC)<br>
+Owner: Canadian Information Centre for International Credentials (CICIC)<br>
+Attention: Michael Ringuette, Coordinator, CICIC<br>
+95 St. Clair Avenue West, Suite 1106<br>
+Toronto ON M4V 1N6<br>
 m.ringuette@cmec.ca | 416-962-9725 ext. 271
 
 ### SUBMITTED BY
 
-The Alpha Nova Inc.  
-1545 Maley Drive  
-Greater Sudbury ON P3A 4R7  
-info@thealphanova.com | +1 437 424 5384  
+The Alpha Nova Inc.<br>
+1545 Maley Drive<br>
+Greater Sudbury ON P3A 4R7<br>
+info@thealphanova.com | +1 437 424 5384<br>
 thealphanova.com | labs.thealphanova.com
 
 ### SUBMISSION DATE
 
 4 September 2026, internal draft date only
 
-**Solicitation:** 2026-CICIC-01  
-**MERX:** 0000330086  
-**Source ID:** PV.MN.ON.383381.C111700  
-**Solicitation type:** RFQ Formal  
-**Closing:** 18 September 2026, 4:00 p.m. EDT  
-**Proposed initial term:** 1 April 2027, 9:00 a.m. EDT to 31 March 2028, 9:00 a.m. EDT  
+**Solicitation:** 2026-CICIC-01<br>
+**MERX:** 0000330086<br>
+**Source ID:** PV.MN.ON.383381.C111700<br>
+**Solicitation type:** RFQ Formal<br>
+**Closing:** 18 September 2026, 4:00 p.m. EDT<br>
+**Proposed initial term:** 1 April 2027, 9:00 a.m. EDT to 31 March 2028, 9:00 a.m. EDT<br>
 **Components bid:** All three components as one bundled proposal
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -51,44 +51,44 @@ The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
 
 ## Table of Contents
 
-1. [Understanding of the Project](#1-understanding-of-the-project)  
-   1.1 [CICIC's mandate defines the product boundary](#11-cicics-mandate-defines-the-product-boundary)  
-   1.2 [The operational opportunity](#12-the-operational-opportunity)  
-   1.3 [Three components, one controlled service chain](#13-three-components-one-controlled-service-chain)  
-   1.4 [A governed knowledge base, not an open-ended AI assistant](#14-a-governed-knowledge-base-not-an-open-ended-ai-assistant)  
-   1.5 [Non-negotiable operating rules](#15-non-negotiable-operating-rules)  
+1. [Understanding of the Project](#1-understanding-of-the-project)<br>
+   1.1 [CICIC's mandate defines the product boundary](#11-cicics-mandate-defines-the-product-boundary)<br>
+   1.2 [The operational opportunity](#12-the-operational-opportunity)<br>
+   1.3 [Three components, one controlled service chain](#13-three-components-one-controlled-service-chain)<br>
+   1.4 [A governed knowledge base, not an open-ended AI assistant](#14-a-governed-knowledge-base-not-an-open-ended-ai-assistant)<br>
+   1.5 [Non-negotiable operating rules](#15-non-negotiable-operating-rules)<br>
    1.6 [What success looks like](#16-what-success-looks-like)
-2. [Relevant Experience & References](#2-relevant-experience--references)  
-   2.1 [About The Alpha Nova](#21-about-the-alpha-nova)  
-   2.2 [Why we are a strong fit](#22-why-we-are-a-strong-fit)  
-   2.3 [Core Project Team](#23-core-project-team)  
-   2.4 [Relevant public work](#24-relevant-public-work)  
+2. [Relevant Experience & References](#2-relevant-experience--references)<br>
+   2.1 [About The Alpha Nova](#21-about-the-alpha-nova)<br>
+   2.2 [Why we are a strong fit](#22-why-we-are-a-strong-fit)<br>
+   2.3 [Core Project Team](#23-core-project-team)<br>
+   2.4 [Relevant public work](#24-relevant-public-work)<br>
    2.5 [References](#25-references)
-3. [Technical Architecture & Scalability](#3-technical-architecture--scalability)  
-   3.1 [Architecture principles](#31-architecture-principles)  
-   3.2 [Logical architecture](#32-logical-architecture)  
-   3.3 [Knowledge ingestion and governance](#33-knowledge-ingestion-and-governance)  
-   3.4 [Grounded response pipeline](#34-grounded-response-pipeline)  
-   3.5 [Channel design](#35-channel-design)  
-   3.6 [Identity, authorization, and tier enforcement](#36-identity-authorization-and-tier-enforcement)  
-   3.7 [Security, privacy, residency, and portability](#37-security-privacy-residency-and-portability)  
-   3.8 [Accessibility and bilingual delivery](#38-accessibility-and-bilingual-delivery)  
-   3.9 [Auditability, measurement, and service levels](#39-auditability-measurement-and-service-levels)  
+3. [Technical Architecture & Scalability](#3-technical-architecture--scalability)<br>
+   3.1 [Architecture principles](#31-architecture-principles)<br>
+   3.2 [Logical architecture](#32-logical-architecture)<br>
+   3.3 [Knowledge ingestion and governance](#33-knowledge-ingestion-and-governance)<br>
+   3.4 [Grounded response pipeline](#34-grounded-response-pipeline)<br>
+   3.5 [Channel design](#35-channel-design)<br>
+   3.6 [Identity, authorization, and tier enforcement](#36-identity-authorization-and-tier-enforcement)<br>
+   3.7 [Security, privacy, residency, and portability](#37-security-privacy-residency-and-portability)<br>
+   3.8 [Accessibility and bilingual delivery](#38-accessibility-and-bilingual-delivery)<br>
+   3.9 [Auditability, measurement, and service levels](#39-auditability-measurement-and-service-levels)<br>
    3.10 [Scalability and maintainability](#310-scalability-and-maintainability)
-4. [Work Plan & Delivery Approach](#4-work-plan--delivery-approach)  
-   4.1 [Delivery sequence](#41-delivery-sequence)  
-   4.2 [Governance and working model](#42-governance-and-working-model)  
-   4.3 [Quality assurance and acceptance](#43-quality-assurance-and-acceptance)  
-   4.4 [Training, documentation, and support](#44-training-documentation-and-support)  
-   4.5 [CICIC and CCMEC responsibilities](#45-cicic-and-ccmec-responsibilities)  
-   4.6 [Risks and controls](#46-risks-and-controls)  
+4. [Work Plan & Delivery Approach](#4-work-plan--delivery-approach)<br>
+   4.1 [Delivery sequence](#41-delivery-sequence)<br>
+   4.2 [Governance and working model](#42-governance-and-working-model)<br>
+   4.3 [Quality assurance and acceptance](#43-quality-assurance-and-acceptance)<br>
+   4.4 [Training, documentation, and support](#44-training-documentation-and-support)<br>
+   4.5 [CICIC and CCMEC responsibilities](#45-cicic-and-ccmec-responsibilities)<br>
+   4.6 [Risks and controls](#46-risks-and-controls)<br>
    4.7 [Transition and end-of-term portability](#47-transition-and-end-of-term-portability)
 5. [Budget](#5-budget)
 6. [Appendix A: Key Team Resumes](#appendix-a-key-team-resumes)
 7. [Appendix B: R1-R22 Compliance Matrix](#appendix-b-r1-r22-compliance-matrix)
 8. [INTERNAL Athif Checklist](#internal-athif-checklist-strip-before-bid)
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -171,7 +171,7 @@ For CICIC staff, success means one queue, consistent taxonomy, complete handover
 
 For CCMEC, success means a portable and auditable service with enforceable access boundaries, evidence of bilingual and accessible operation, controlled data handling, and measurable service levels. The system should make performance visible without turning aspirational targets into unbounded warranties.
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -258,34 +258,34 @@ The Alpha Nova placed first among 29 teams in the Côté Gold AI Challenge invol
 
 ### Reference 1: UKE Hamburg
 
-**Contact:** Prof. Dr. Steffen Moritz  
-**Title:** Head of Clinical Neuropsychology Working Group, Department of Psychiatry and Psychotherapy, UKE Hamburg; Professor of Clinical Psychology  
-**Email:** moritz@uke.de  
-**Telephone:** +49 40 7410 56565  
-**Engagement:** COGITO, January 2021 to March 2022, with occasional support since  
+**Contact:** Prof. Dr. Steffen Moritz<br>
+**Title:** Head of Clinical Neuropsychology Working Group, Department of Psychiatry and Psychotherapy, UKE Hamburg; Professor of Clinical Psychology<br>
+**Email:** moritz@uke.de<br>
+**Telephone:** +49 40 7410 56565<br>
+**Engagement:** COGITO, January 2021 to March 2022, with occasional support since<br>
 **Relevant scope:** Privacy-sensitive multilingual application, more than 240,000 downloads, 19 languages
 
 **Relationship disclosure:** Prof. Dr. Steffen Moritz is both the client reference for the COGITO engagement and listed as Lead Scientific Advisor to The Alpha Nova. CCMEC should evaluate the reference with that relationship clearly disclosed.
 
 ### Reference 2: One Chamber System / Chamber Perks
 
-**Contact:** Karen Hastie, CEO and Founder  
-**Email:** karen@onechambersystem.com  
-**Telephone:** +1 705 669 7343  
-**Engagement:** Approximately 18 months  
+**Contact:** Karen Hastie, CEO and Founder<br>
+**Email:** karen@onechambersystem.com<br>
+**Telephone:** +1 705 669 7343<br>
+**Engagement:** Approximately 18 months<br>
 **Relevant scope:** Bilingual English and French dashboard, rewards, Shop Local, Affinity Partner Portal, and Chamber Member Pro content blocks
 
 ### Reference 3: Wheel It Transportation
 
-**Contact:** Shaunna Babyak, Chief Operating Officer  
-**Email:** info@wheelittransportation.com  
-**Telephone:** +1 705 929 8006  
-**Engagement:** August to November 2025, with ongoing support  
+**Contact:** Shaunna Babyak, Chief Operating Officer<br>
+**Email:** info@wheelittransportation.com<br>
+**Telephone:** +1 705 929 8006<br>
+**Engagement:** August to November 2025, with ongoing support<br>
 **Relevant scope:** Accessible booking and scheduling for seniors and people with disabilities
 
 These are the three proposed client references. Dr. Markus Lehmann is not presented as an independent client reference because he is a Strategic Advisor to The Alpha Nova.
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -466,7 +466,7 @@ Maintainability depends on configuration rather than model retraining. CICIC sta
 
 Future email automation can reuse the grounding and policy layer after its inbound and outbound scope is approved. It is not included as an autonomous fourth channel in this three-component proposal.
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -595,7 +595,7 @@ The one-year initial term should produce an operable service, not a dependency t
 
 At renewal or transition, CICIC will receive the agreed current exports of knowledge, metadata, taxonomy, cases, tagged transcripts, citations, audit records, configuration, and reports. The handover package will identify software dependencies, subprocessor relationships, outstanding incidents, known defects, operating procedures, and deletion obligations. The parties can then choose renewal, transition to another operator, or decommissioning with a verified data disposition.
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -666,7 +666,7 @@ The final pricing workbook or schedule should state rather than hide its operati
 
 This internal draft intentionally contains no invented component amount, platform licence, usage fee, or total quote.
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -676,9 +676,9 @@ The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
 
 ## Athif Shaffy
 
-**Title:** Founder & CEO, The Alpha Nova Inc.  
-**Location:** Greater Sudbury, Ontario  
-**Proposed role:** Project Lead & Technical Lead  
+**Title:** Founder & CEO, The Alpha Nova Inc.<br>
+**Location:** Greater Sudbury, Ontario<br>
+**Proposed role:** Project Lead & Technical Lead<br>
 **LinkedIn:** https://www.linkedin.com/in/athif-shaffy/
 
 ### Profile
@@ -724,8 +724,8 @@ Athif combines delivery leadership, software architecture, AI product work, educ
 
 ## Ertugrul Sahin
 
-**About page title:** Senior Software Developer  
-**Proposed role:** Senior Software Engineer / Architect  
+**About page title:** Senior Software Developer<br>
+**Proposed role:** Senior Software Engineer / Architect<br>
 **LinkedIn:** https://www.linkedin.com/in/ertugrul-sahin-502911155/
 
 ### Profile
@@ -768,8 +768,8 @@ Ertugrul's backend, real-time interface, database, delivery, and access-manageme
 
 ## Laxman KC
 
-**Title:** Software Developer  
-**Proposed role:** Software Developer  
+**Title:** Software Developer<br>
+**Proposed role:** Software Developer<br>
 **LinkedIn:** https://www.linkedin.com/in/laxmankc/
 
 ### Profile
@@ -817,8 +817,8 @@ Laxman's experience with AI tooling, event-driven data, APIs, automated tests, a
 
 ## Deepshika Ghale
 
-**About page title:** UI Consultant  
-**Proposed role:** UI/UX  
+**About page title:** UI Consultant<br>
+**Proposed role:** UI/UX<br>
 **LinkedIn:** https://www.linkedin.com/in/deepshika-ghale/
 
 ### Profile
@@ -865,9 +865,9 @@ Deepshika's role supports practical accessibility, readable disclosures and cita
 
 ## Shubham Dhamane
 
-**Title:** Business Analyst  
-**Location:** Greater Sudbury, Ontario  
-**Proposed role:** Requirements, taxonomy, and UAT coordination  
+**Title:** Business Analyst<br>
+**Location:** Greater Sudbury, Ontario<br>
+**Proposed role:** Requirements, taxonomy, and UAT coordination<br>
 **LinkedIn:** https://www.linkedin.com/in/dhamanes7/
 
 ### Profile
@@ -886,8 +886,8 @@ No additional employment dates, education, certifications, or awards are claimed
 
 ## Cheick Ismael Maiga, P.Eng.
 
-**Standing:** Technical Advisor  
-**Proposed role:** Advisory review, not day-to-day delivery  
+**Standing:** Technical Advisor<br>
+**Proposed role:** Advisory review, not day-to-day delivery<br>
 **LinkedIn:** https://www.linkedin.com/in/cheickismaelmaiga/
 
 ### Profile
@@ -898,7 +898,7 @@ No engineering discipline, employment history, education, certification beyond P
 
 ## Dr. Markus Lehmann
 
-**Standing:** Strategic Advisor  
+**Standing:** Strategic Advisor<br>
 **Proposed role:** Strategic advisory input, not day-to-day delivery
 
 ### Profile
@@ -909,9 +909,9 @@ No day-to-day CICIC allocation, employment history, education, or additional cre
 
 ## Prof. Dr. Steffen Moritz
 
-**Standing:** Lead Scientific Advisor to The Alpha Nova and client reference for COGITO  
-**Institutional role:** Head of Clinical Neuropsychology Working Group, Department of Psychiatry and Psychotherapy, UKE Hamburg; Professor of Clinical Psychology  
-**Proposed role:** Scientific advisory input if requested, not day-to-day delivery  
+**Standing:** Lead Scientific Advisor to The Alpha Nova and client reference for COGITO<br>
+**Institutional role:** Head of Clinical Neuropsychology Working Group, Department of Psychiatry and Psychotherapy, UKE Hamburg; Professor of Clinical Psychology<br>
+**Proposed role:** Scientific advisory input if requested, not day-to-day delivery<br>
 **Reference contact:** moritz@uke.de | +49 40 7410 56565
 
 ### Profile
@@ -922,7 +922,7 @@ Prof. Dr. Steffen Moritz provided scientific leadership in connection with COGIT
 
 Prof. Dr. Steffen Moritz is both the proposed UKE Hamburg client reference for COGITO and listed as Lead Scientific Advisor to The Alpha Nova. This dual relationship is disclosed so CCMEC can assess the reference with full context. He is not represented as independent of The Alpha Nova's advisory network and is not proposed for day-to-day CICIC delivery.
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -957,7 +957,7 @@ The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
 | R21 | M | Configurable CICIC disclaimers and branding | **Will comply.** Authorized staff can maintain approved wording and presentation through controlled configuration and audit. | Sections 1.5, 3.3, 3.5, 3.10; configuration, approval, and channel-rendering tests |
 | R22 | M | Encryption, access control, and Tier 2 authentication | **Will comply.** Data is encrypted in transit and at rest, access is role-based, and Tier 2 integrates with CICIC's existing identity method, **[ATHIF TO CONFIRM]**. | Sections 3.6, 3.7; encryption configuration, access review, and authentication tests |
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION
 
 ---
 
@@ -1031,4 +1031,4 @@ The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
 - [ ] Remove all unresolved placeholders or make an explicit, accurate disclosure in the final bid.
 - [ ] Athif gives final approval and personally submits through the official channel.
 
-The Alpha Nova | Confidential | INTERNAL DRAFT: NOT FOR SUBMISSION
+The Alpha Nova | Confidential | INTERNAL DRAFT - NOT FOR SUBMISSION

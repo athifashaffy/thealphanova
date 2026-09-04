@@ -2,11 +2,11 @@
 
 ## CICIC RFQ 2026-CICIC-01 Questions for Clarification
 
-**MERX:** 0000330086  
-**Source ID:** PV.MN.ON.383381.C111700  
-**Question deadline:** 4 September 2026, 9:00 a.m. EDT  
-**Buyer contact:** Michael Ringuette, Coordinator, CICIC  
-**Email shown in the notice:** m.ringuette@cmec.ca  
+**MERX:** 0000330086<br>
+**Source ID:** PV.MN.ON.383381.C111700<br>
+**Question deadline:** 4 September 2026, 9:00 a.m. EDT<br>
+**Buyer contact:** Michael Ringuette, Coordinator, CICIC<br>
+**Email shown in the notice:** m.ringuette@cmec.ca
 
 **Confirm every question against the current official MERX PDF and all addenda before sending. Delete any question the package already answers. Athif sends the final questions through the official channel. Do not upload or email this draft automatically.**
 
@@ -86,10 +86,10 @@ Please confirm the page limit, font and margin rules, permitted file formats and
 
 > Thank you for your clarification.
 >
-> Athif Shaffy  
-> Founder & CEO  
-> The Alpha Nova Inc.  
-> 1545 Maley Drive, Greater Sudbury ON P3A 4R7  
+> Athif Shaffy<br>
+> Founder & CEO<br>
+> The Alpha Nova Inc.<br>
+> 1545 Maley Drive, Greater Sudbury ON P3A 4R7<br>
 > info@thealphanova.com | +1 437 424 5384
 
 **INTERNAL: ATHIF SENDS. CONFIRM AGAINST THE OFFICIAL MERX PDF BEFORE SENDING.**
