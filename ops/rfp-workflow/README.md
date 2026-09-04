@@ -18,6 +18,7 @@ Double-click [open-on-pc.html](open-on-pc.html), or `run-local.ps1` / `run-local
 | [prompts/claude-compliance.md](prompts/claude-compliance.md) | Paste into Claude on your PC |
 | [templates/mineopportunity-master.md](templates/mineopportunity-master.md) | Cover / TOC / sections |
 | [pipeline.csv](pipeline.csv) | Live board |
+| [HOURLY.md](HOURLY.md) | Cloud Agent intake every hour (this conversation) |
 
 Drive folder (private): https://drive.google.com/drive/folders/1OlzaMxK54cpJyfcwu8r86wBAUKfZGm5V
 

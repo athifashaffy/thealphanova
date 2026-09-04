@@ -24,4 +24,4 @@ Double-click `open-on-pc.html`, or run `run-local.ps1` (Windows) / `run-local.sh
 
 ## What Grok / Cursor Cloud is for
 
-Intake, fit scoring, Drive filing. Not ChatGPT. Not Claude. Not portal submit.
+Intake every hour in this Cloud Agent conversation. Fit scoring. Drive filing. Not ChatGPT. Not Claude. Not portal submit. Stop by telling the agent to unsubscribe `rfp-hourly-intake`.
