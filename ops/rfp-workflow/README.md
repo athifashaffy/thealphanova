@@ -19,7 +19,11 @@ Double-click [open-on-pc.html](open-on-pc.html), or `run-local.ps1` / `run-local
 | [templates/mineopportunity-master.md](templates/mineopportunity-master.md) | Cover / TOC / sections |
 | [pipeline.csv](pipeline.csv) | Live board |
 | [HOURLY.md](HOURLY.md) | Cloud Agent intake every hour (this conversation) |
+| [last-run.example.json](last-run.example.json) | Change-detection baseline (live copy is Drive `06 — last-run.json`) |
+| [prompts/hourly-wake.md](prompts/hourly-wake.md) | Timer prompt for each hourly wake |
 
 Drive folder (private): https://drive.google.com/drive/folders/1OlzaMxK54cpJyfcwu8r86wBAUKfZGm5V
 
-No passwords, insurance PDFs, or bid prices in this directory. The GitHub repo is public.
+Review pack (4 Sep 2026, INTERNAL DRAFTS): https://drive.google.com/drive/folders/1yBt7Xk61IdwN20XPsljWhRYbwNideND9
+
+No passwords, insurance PDFs, or bid prices in this directory. Full proposal drafts live in Drive. The GitHub repo is public.
