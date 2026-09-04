@@ -4,3 +4,6 @@
 
 # python bytecode from ops/ generators
 __pycache__/
+
+# local browser traces from cloud agents
+.playwright-mcp/
