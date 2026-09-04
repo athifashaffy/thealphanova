@@ -705,7 +705,7 @@ Athif Shaffy leads company strategy, client partnerships, and product vision at 
 ### Education
 
 - Diploma, Mobile Application Development, Cambrian College
-- Bachelor of Science in Software Engineering, First Class Honours, Staffordshire University through APIIT Sri Lanka
+- Bachelor of Science in Software Engineering, First Class Honours, Staffordshire University. **[ATHIF TO CONFIRM: programme name and year. Do not name Colombo, Passau, or a Sri Lanka office. Personal education pathway may be stated only if Athif wants it on this bid.]**
 
 ### Community leadership
 
@@ -823,7 +823,7 @@ Laxman's experience with AI tooling, event-driven data, APIs, automated tests, a
 
 ### Profile
 
-Deepshika Ghale is a product designer and UX strategist who advises The Alpha Nova on UI and UX. She works with Figma, prototyping, and AODA and WCAG 2.1 Level AA considerations. For CICIC, she will advise on staff workflows, public chat interaction, bilingual layouts, accessibility, and user-acceptance preparation.
+Deepshika Ghale is a UI Consultant who advises The Alpha Nova on UI and UX. She works with Figma, prototyping, and AODA and WCAG 2.1 Level AA considerations. For CICIC, she will advise on staff workflows, public chat interaction, bilingual layouts, accessibility, and user-acceptance preparation.
 
 ### Experience
 

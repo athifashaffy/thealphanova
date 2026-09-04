@@ -91,10 +91,10 @@ Email-to-SharePoint records capture is adjacent to our Microsoft 365 work. It is
 | Reference | Organisation | Contact | Relationship |
 | --- | --- | --- | --- |
 | Prof. Dr. Steffen Moritz | University Medical Center Hamburg-Eppendorf (UKE) | moritz@uke.de · +49 40 7410 56565 | COGITO client; also Lead Scientific Advisor to The Alpha Nova (dual role disclosed) |
-| Karen Hastie | One Chamber System | karen@onechambersystem.com · +1 705 669 7343 | Client `[ATHIF TO CONFIRM: project to cite]` |
+| Karen Hastie | One Chamber System | karen@onechambersystem.com · +1 705 669 7343 | Client, Chamber Perks |
 | Shaunna Babyak | Wheel It Transportation | info@wheelittransportation.com · +1 705 929 8006 | Client |
 
-Disclosure: Dr. Markus Lehmann is a Strategic Advisor to The Alpha Nova and appears as a website testimonial; he is not offered as an independent reference.
+Disclosure: Dr. Markus Lehmann is a Strategic Advisor to The Alpha Nova. He is not offered as a client reference.
 
 ---
 
@@ -187,9 +187,9 @@ Roles are those held at The Alpha Nova, as shown on our public About page.
 | Shubham Dhamane | Business analyst; retention schedule modelling, information architecture, adoption measurement | Business Analyst |
 | Deepshika Ghale | UX of the filing action; accessibility of the add-in | UI Consultant |
 | Laxman KC | Developer; classification suggestion model if pursued | Software Developer |
-| Cheick Ismael Maiga, P.Eng. | Technical advisor and independent review | Technical Advisor |
+| Cheick Ismael Maiga, P.Eng. | Technical advisor and advisory review | Technical Advisor |
 
-Advisors disclosed and not assigned: Dr. Markus Lehmann (Strategic Advisor; also a website testimonial) and Prof. Dr. Steffen Moritz (Lead Scientific Advisor; also COGITO client and listed reference).
+Advisors disclosed and not assigned: Dr. Markus Lehmann (Strategic Advisor; not a client reference) and Prof. Dr. Steffen Moritz (Lead Scientific Advisor; also COGITO client and listed reference).
 
 ---
 
@@ -209,7 +209,7 @@ Translates business goals into requirements and measurable value at The Alpha No
 
 ### Deepshika Ghale, UI Consultant (Greater Sudbury, Ontario)
 
-Product designer and UX strategist advising The Alpha Nova since March 2025; Figma and prototyping; AODA and WCAG practice. First place, Cursor hackathon, Sudbury, 2026. Would design the filing action so it takes as few decisions as possible and remains accessible.
+UI Consultant advising The Alpha Nova since March 2025 on interface and user experience; Figma and prototyping; AODA and WCAG practice. First place, Cursor hackathon, Sudbury, 2026. Would design the filing action so it takes as few decisions as possible and remains accessible.
 
 ### Laxman KC, Software Developer
 
@@ -217,11 +217,11 @@ Software Developer at The Alpha Nova since January 2024; Research and Developmen
 
 ### Cheick Ismael Maiga, P.Eng., Technical Advisor
 
-Professional Engineer advising across The Alpha Nova's engineering projects; independent review. `[ATHIF TO CONFIRM: jurisdiction and discipline]`
+Professional Engineer advising across The Alpha Nova's engineering projects; advisory review. He is The Alpha Nova's Technical Advisor, not an independent third-party reviewer. `[ATHIF TO CONFIRM: jurisdiction and discipline]`
 
 ### Advisors (disclosed, not assigned)
 
-Dr. Markus Lehmann, Strategic Advisor; also a website testimonial for comAlpine Information System GmbH. Prof. Dr. Steffen Moritz, Lead Scientific Advisor; also COGITO client and listed reference.
+Dr. Markus Lehmann, Strategic Advisor; not presented as a client reference. Prof. Dr. Steffen Moritz, Lead Scientific Advisor; also COGITO client and listed reference.
 
 ---
 

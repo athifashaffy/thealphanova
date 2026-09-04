@@ -123,10 +123,10 @@ Only confirmed, live contacts are listed. The City may contact each directly.
 | Reference | Organisation | Contact | Relationship |
 | --- | --- | --- | --- |
 | Prof. Dr. Steffen Moritz | University Medical Center Hamburg-Eppendorf (UKE) | moritz@uke.de · +49 40 7410 56565 | Client for COGITO. Also serves as Lead Scientific Advisor to The Alpha Nova; this dual role is disclosed so the City can weigh the reference accordingly. |
-| Karen Hastie | One Chamber System | karen@onechambersystem.com · +1 705 669 7343 | Client `[ATHIF TO CONFIRM: project name and dates to cite]` |
+| Karen Hastie | One Chamber System | karen@onechambersystem.com · +1 705 669 7343 | Client, Chamber Perks `[ATHIF TO CONFIRM: dates to cite]` |
 | Shaunna Babyak | Wheel It Transportation | info@wheelittransportation.com · +1 705 929 8006 | Client, accessibility-focused transportation software |
 
-Disclosure: Dr. Markus Lehmann appears on our website as a client testimonial (comAlpine Information System GmbH) and also serves as Strategic Advisor to The Alpha Nova. We do not present him as an independent reference in this proposal.
+Disclosure: Dr. Markus Lehmann is a Strategic Advisor to The Alpha Nova. He is not offered as a client reference.
 
 ---
 
@@ -222,9 +222,9 @@ Roles below are the roles these individuals hold at The Alpha Nova and are drawn
 | Deepshika Ghale | Frontline UX and accessibility assessor; interview design | UI Consultant | Phases 1 to 3 |
 | Shubham Dhamane | Business analyst: inventory register, requirements baseline, lifecycle maps | Business Analyst | Phases 1 to 4 |
 | Laxman KC | QA and test-scenario author for requirements validation | Software Developer | Phase 3 |
-| Cheick Ismael Maiga, P.Eng. | Technical advisor; independent review of findings | Technical Advisor | Review points end of Phases 2 and 4 |
+| Cheick Ismael Maiga, P.Eng. | Technical advisor; advisory review of findings | Technical Advisor | Review points end of Phases 2 and 4 |
 
-Advisors disclosed: Dr. Markus Lehmann (Strategic Advisor) and Prof. Dr. Steffen Moritz (Lead Scientific Advisor and COGITO client) advise the company and are not assigned to this engagement.
+Advisors disclosed: Dr. Markus Lehmann (Strategic Advisor; not a client reference) and Prof. Dr. Steffen Moritz (Lead Scientific Advisor and COGITO client) advise the company and are not assigned to this engagement.
 
 ---
 
@@ -286,7 +286,7 @@ Technical assessor. Leads complex feature development and system architecture at
 
 ### Deepshika Ghale, UI Consultant (Greater Sudbury, Ontario)
 
-Frontline UX and accessibility assessor. Product designer and UX strategist advising The Alpha Nova since March 2025 on UI and user experience, working in Figma and prototyping tools. Applies AODA and WCAG accessibility standards. First place, Cursor hackathon, Sudbury, 2026. Relevance: designs and runs stakeholder interviews with operators, evaluates usability and accessibility of current systems, and turns findings into requirements.
+Frontline UX and accessibility assessor. UI Consultant advising The Alpha Nova since March 2025 on interface and user experience, working in Figma and prototyping tools. Applies AODA and WCAG accessibility standards. First place, Cursor hackathon, Sudbury, 2026. Relevance: designs and runs stakeholder interviews with operators, evaluates usability and accessibility of current systems, and turns findings into requirements.
 
 ### Shubham Dhamane, Business Analyst (Greater Sudbury, Ontario)
 
@@ -298,11 +298,11 @@ QA and requirements-validation author. Software Developer at The Alpha Nova sinc
 
 ### Cheick Ismael Maiga, P.Eng., Technical Advisor
 
-Professional Engineer advising across The Alpha Nova's engineering projects. Provides independent review of findings and the options analysis at two checkpoints. `[ATHIF TO CONFIRM: licensing jurisdiction and discipline to cite]`
+Professional Engineer advising across The Alpha Nova's engineering projects. Provides advisory review of findings and the options analysis at two checkpoints. He is The Alpha Nova's Technical Advisor, not an independent third-party reviewer. `[ATHIF TO CONFIRM: licensing jurisdiction and discipline to cite]`
 
 ### Advisors (disclosed, not assigned)
 
-Dr. Markus Lehmann, Strategic Advisor, advises on technology strategy and enterprise architecture. Also appears on our website as a client testimonial for comAlpine Information System GmbH; not presented as an independent reference. Prof. Dr. Steffen Moritz, Lead Scientific Advisor, University Medical Center Hamburg-Eppendorf; also the client for COGITO and listed as a reference with that dual role disclosed.
+Dr. Markus Lehmann, Strategic Advisor, advises on technology strategy and enterprise architecture. Not presented as a client reference. Prof. Dr. Steffen Moritz, Lead Scientific Advisor, University Medical Center Hamburg-Eppendorf; also the client for COGITO and listed as a reference with that dual role disclosed.
 
 ---
 

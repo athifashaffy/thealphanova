@@ -114,10 +114,10 @@ None of the above is a municipal reference and none involves SAP PM, CentralSqua
 | Reference | Organisation | Contact | Relationship |
 | --- | --- | --- | --- |
 | Prof. Dr. Steffen Moritz | University Medical Center Hamburg-Eppendorf (UKE) | moritz@uke.de · +49 40 7410 56565 | Client for COGITO. Also Lead Scientific Advisor to The Alpha Nova; dual role disclosed. |
-| Karen Hastie | One Chamber System | karen@onechambersystem.com · +1 705 669 7343 | Client `[ATHIF TO CONFIRM: project to cite]` |
+| Karen Hastie | One Chamber System | karen@onechambersystem.com · +1 705 669 7343 | Client, Chamber Perks |
 | Shaunna Babyak | Wheel It Transportation | info@wheelittransportation.com · +1 705 929 8006 | Client |
 
-Disclosure: Dr. Markus Lehmann is a Strategic Advisor to The Alpha Nova and also appears as a client testimonial on our website. He is not offered as an independent reference.
+Disclosure: Dr. Markus Lehmann is a Strategic Advisor to The Alpha Nova. He is not offered as a client reference.
 
 ---
 
@@ -207,7 +207,7 @@ Named support contact, business-hours response in Pacific time, a severity matri
 | Shubham Dhamane | Business analyst; service catalogue, routing rules, acceptance criteria, migration mapping | Business Analyst | Phases 0 to 3 |
 | Cheick Ismael Maiga, P.Eng. | Technical advisor; architecture review at Phase 1 and Phase 3 gates | Technical Advisor | Review points |
 
-Advisors disclosed and not assigned: Dr. Markus Lehmann (Strategic Advisor; also a website testimonial) and Prof. Dr. Steffen Moritz (Lead Scientific Advisor; also COGITO client and reference).
+Advisors disclosed and not assigned: Dr. Markus Lehmann (Strategic Advisor; not a client reference) and Prof. Dr. Steffen Moritz (Lead Scientific Advisor; also COGITO client and reference).
 
 ---
 
@@ -274,7 +274,7 @@ Mobile and connector developer. Software Developer at The Alpha Nova since Janua
 
 ### Deepshika Ghale, UI Consultant (Greater Sudbury, Ontario)
 
-UX and accessibility lead. Product designer and UX strategist advising The Alpha Nova since March 2025; Figma and prototyping; AODA and WCAG practice. First place, Cursor hackathon, Sudbury, 2026. Owns resident and staff flows and WCAG 2.1 AA testing.
+UX and accessibility. UI Consultant advising The Alpha Nova since March 2025 on interface and user experience; Figma and prototyping; AODA and WCAG practice. First place, Cursor hackathon, Sudbury, 2026. Owns resident and staff flows and WCAG 2.1 AA testing.
 
 ### Shubham Dhamane, Business Analyst (Greater Sudbury, Ontario)
 
@@ -286,7 +286,7 @@ Professional Engineer advising across The Alpha Nova's engineering projects. Rev
 
 ### Advisors (disclosed, not assigned)
 
-Dr. Markus Lehmann, Strategic Advisor; also a website testimonial for comAlpine Information System GmbH. Prof. Dr. Steffen Moritz, Lead Scientific Advisor; also COGITO client and listed reference.
+Dr. Markus Lehmann, Strategic Advisor; not presented as a client reference. Prof. Dr. Steffen Moritz, Lead Scientific Advisor; also COGITO client and listed reference.
 
 ---
 

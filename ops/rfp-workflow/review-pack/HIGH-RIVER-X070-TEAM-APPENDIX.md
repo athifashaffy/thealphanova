@@ -77,7 +77,7 @@ The people below are the people who deliver. We do not propose named personnel a
 | Laxman KC | Software Developer | Development and content migration engineering. Template implementation, forms, search, redirect mapping, automated migration of existing content, and testing. | Build through launch, approximately 60 percent |
 | Deepshika Ghale | UI Consultant | Interface and experience design. Information architecture support, page templates and component design, Town visual identity application, responsive behaviour, and WCAG 2.1 AA conformance in design and testing. | Design through user acceptance testing, approximately 45 percent |
 | Shubham Dhamane | Business Analyst | Requirements and content inventory, stakeholder workshops with Town departments, acceptance criteria, user acceptance testing coordination, staff training delivery and written documentation. | Full engagement, approximately 40 percent |
-| Cheick Ismael Maiga | Technical Advisor, P.Eng. | Advisory. Independent technical review at architecture sign off and again before launch. | As required |
+| Cheick Ismael Maiga | Technical Advisor, P.Eng. | Advisory. Technical review at architecture sign off and again before launch. Not day-to-day delivery staff and not independent of The Alpha Nova. | As required |
 | Dr. Markus Lehmann | Strategic Advisor | Advisory. Technology strategy and enterprise architecture review. | As required |
 | Prof. Dr. Steffen Moritz | Lead Scientific Advisor | Advisory. Available for review of accessibility and content clarity practice. | As required |
 
@@ -85,7 +85,7 @@ The people below are the people who deliver. We do not propose named personnel a
 
 Athif Shaffy is accountable for this engagement from award to the end of the support period. Ertugrul Sahin owns the technical solution and is the person the Town's information technology contact deals with directly.
 
-Continuity is deliberate rather than assumed. The platform is open source and the Town owns it, the deployment is documented, configuration is held in version control, and Cheick Ismael Maiga's independent review exists in part so that a second qualified engineer understands the system without relying on a single individual. Staff training and written administrator and author guides are delivered as part of launch, so the Town's ability to run its own website does not depend on our availability.
+Continuity is deliberate rather than assumed. The platform is open source and the Town owns it, the deployment is documented, configuration is held in version control, and Cheick Ismael Maiga's advisory review exists in part so that a second qualified engineer understands the system without relying on a single individual. Staff training and written administrator and author guides are delivered as part of launch, so the Town's ability to run its own website does not depend on our availability.
 
 ### Disclosures
 
@@ -198,12 +198,12 @@ Greater Sudbury, Ontario
 ---
 
 ### Cheick Ismael Maiga
-**Technical Advisor, P.Eng. Independent technical review.**
+**Technical Advisor, P.Eng. Advisory technical review.**
 Canada
 
 **Profile.** Professional Engineer and Technical Advisor to The Alpha Nova, advising across our engineering engagements and bringing hands on engineering depth and rigour to demanding technical work.
 
-**Role on X070.** Advisory, at two defined gates: independent review of the technical solution at architecture sign off, and a pre launch review covering security, performance and operational readiness. His involvement is also a continuity control, since it means a second qualified engineer understands the deployment.
+**Role on X070.** Advisory, at two defined gates: technical review of the technical solution at architecture sign off, and a pre launch review covering security, performance and operational readiness. He is The Alpha Nova's Technical Advisor, not an independent third-party reviewer. His involvement is also a continuity control, since it means a second qualified engineer understands the deployment.
 
 **[ATHIF TO CONFIRM: province of P.Eng. licensure, and whether the Town requires evidence of licensure. Do not assert Alberta licensure.]**
 
@@ -223,7 +223,7 @@ Canada
 ### Prof. Dr. Steffen Moritz
 **Lead Scientific Advisor.**
 
-**Profile.** Head of the Clinical Neuropsychology Working Group in the Department of Psychiatry and Psychotherapy at the University Medical Center Hamburg-Eppendorf, and Professor of Clinical Psychology. Lead Scientific Advisor to The Alpha Nova, and collaborator with our team on the COGITO application, which ships in five or more languages with accessibility and privacy requirements designed in.
+**Profile.** Head of the Clinical Neuropsychology Working Group in the Department of Psychiatry and Psychotherapy at the University Medical Center Hamburg-Eppendorf, and Professor of Clinical Psychology. Lead Scientific Advisor to The Alpha Nova, and collaborator with our team on the COGITO application. **[ATHIF TO CONFIRM: language count. CICIC draft uses 19 languages and more than 240,000 downloads. Do not leave "five or more" if 19 is the number we will stand behind.]** Accessibility and privacy requirements are designed in.
 
 **Role on X070.** Advisory, as required, on content clarity and accessible presentation practice.
 

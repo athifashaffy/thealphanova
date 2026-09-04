@@ -135,11 +135,11 @@ Registration, insurance, WSIB or WCB coverage and any bonding requirement in the
 
 Four things in our record map directly onto what COL-26-139 asks for.
 
-**Published data that other people depend on being right.** COGITO, built with the University Medical Center Hamburg-Eppendorf, puts progress data in front of both patients and clinicians. The clinician view is a live analytics surface: aggregate progress across a caseload, per participant trends, and the ability to act on what is shown. It is deployed across multiple healthcare institutions and validated in peer reviewed publications. The relevance here is not healthcare. It is that we have built a reporting surface in a domain where a wrong number is a serious problem, under European privacy rules, with data minimization designed in from the start.
+**Published data that other people depend on being right.** COGITO, built with the University Medical Center Hamburg-Eppendorf, puts progress data in front of both patients and clinicians. The clinician view is a live analytics surface: aggregate progress across a caseload, per participant trends, and the ability to act on what is shown. **[ATHIF TO CONFIRM before submission: "deployed across multiple healthcare institutions" and "validated in peer reviewed publications". Do not leave either claim in the submitted file unless Athif can point to the institutions and the publications.]** The relevance here is not healthcare. It is that we have built a reporting surface in a domain where a wrong number is a serious problem, under European privacy rules, with data minimization designed in from the start.
 
-**Multi language and accessibility sensitive interfaces.** COGITO ships in five or more languages with full localization, including offline operation. The Wheel It platform, built with Wheel It Transportation in Greater Sudbury, is accessibility oriented by its nature: the users are people whose mobility needs the service exists to meet. Both projects made us build interfaces where the layout, contrast, labelling and keyboard path are requirements rather than polish. That is the same discipline WCAG 2.1 AA compliance demands, and Section 3.10 states what we will and will not warrant.
+**Multi language and accessibility sensitive interfaces.** COGITO is multilingual with full localization, including offline operation. **[ATHIF TO CONFIRM: use the same language count as CICIC (19) or keep a conservative wording. Do not mix "five or more" and "19" across bids.]** The Wheel It platform, built with Wheel It Transportation in Greater Sudbury, is accessibility oriented by its nature: the users are people whose mobility needs the service exists to meet. Both projects made us build interfaces where the layout, contrast, labelling and keyboard path are requirements rather than polish. That is the same discipline WCAG 2.1 AA compliance demands, and Section 3.10 states what we will and will not warrant.
 
-**Public facing platforms with staff managed content.** The Cambrian College Alumni platform is a public facing product with institutional content behind it: a searchable directory with filters on industry, graduation year and location, an event lifecycle managed by staff, a career and resource area, and a content hub. Cambrian's alumni relations team manages that content. Engagement tripled within six months of launch and the platform became the primary channel for alumni relations. The transferable part is the pattern: a governed content and data model, filtered public discovery, and a staff workflow that does not route through the vendor.
+**Public facing platforms with staff managed content.** The Cambrian College Alumni platform is a public facing product with institutional content behind it: a searchable directory with filters on industry, graduation year and location, an event lifecycle managed by staff, a career and resource area, and a content hub. Cambrian's alumni relations team manages that content. **[ATHIF TO CONFIRM: "Engagement tripled within six months of launch" and "became the primary channel for alumni relations". Remove both sentences if they cannot be evidenced.]** The transferable part is the pattern: a governed content and data model, filtered public discovery, and a staff workflow that does not route through the vendor.
 
 **Ingest, aggregation and telemetry at frequency.** Chamber Perks, built with One Chamber System, is a member benefits platform where offers, merchants and redemptions are managed by chamber staff and surfaced to members, which is a publish, revise and retire lifecycle in commercial clothing. On the industrial side our team runs production telemetry pipelines ingesting more than ninety thousand messages per day, with scheduled collection, validation, failure handling and dashboards built on top. Economic indicator ingest is a lower volume, lower frequency version of the same engineering problem, and the parts that matter, scheduling, retry, validation, provenance and alerting on a silent source, are the parts we have already built.
 
@@ -152,7 +152,7 @@ For context on our analytical depth rather than as a claim of municipal experien
 | Public 24/7 data portal for a Canadian municipality | Public platforms for a Canadian college, a Canadian transportation operator, a chamber network and a German university hospital | We have not delivered this for a municipal economic development office. First municipal portal of this type. |
 | Automated multi source ingest with refresh | Production telemetry ingest above ninety thousand messages per day, scheduled external data collection, validation and alerting | Our ingest experience is industrial and product telemetry rather than Statistics Canada and open data feeds. The engineering transfers. The specific connectors are new work in configuration. |
 | Staff publish, revise and retire with roles | Staff managed content and lifecycle workflows in Cambrian Alumni and Chamber Perks | Comparable, delivered. |
-| Charts, tables, maps, filters, export | Charts, tables and filtered discovery delivered. Mapping delivered in geospatially oriented work. | Municipal GIS integration against City feature services is configuration we would validate in week one. **[ATHIF TO CONFIRM: map layer sources the City will provide.]** |
+| Charts, tables, maps, filters, export | Charts, tables and filtered discovery delivered. We have not delivered a municipal economic data portal or a production Esri implementation for a Canadian city. | Map layers would be configured from City supplied feature services in week one, not from an invented municipal GIS reference. **[ATHIF TO CONFIRM: map layer sources the City will provide.]** |
 | WCAG 2.1 AA | Accessibility sensitive design in Wheel It and localization in COGITO | We have not been formally audited to WCAG 2.1 AA by a third party on those products. Section 3.10 states what we commit to. |
 | Canadian hosting, no United States suppliers | All personnel and operations Canadian | Section 3.8 raises a real question about what "no United States suppliers" means for cloud infrastructure. We would rather ask than assume. |
 
@@ -455,7 +455,7 @@ Titles are exact. Full resumes are in Appendix A. Allocations are proposed commi
 | Laxman KC | Software Developer | Ingest implementation, scheduling and alerting, export and endpoints, testing. | Phases 1 to 4, approximately 60 percent through go-live |
 | Deepshika Ghale | UI Consultant | Interface configuration, chart and map presentation, City branding, WCAG 2.1 AA design and testing. Attends demonstration. | Phases 1 to 3, approximately 40 percent |
 | Shubham Dhamane | Business Analyst | Requirements and source register, validation rules with data owners, user acceptance testing coordination, staff training and documentation. Attends demonstration. | Phases 0 to 5, approximately 40 percent |
-| Cheick Ismael Maiga | Technical Advisor, P.Eng. | Advisory. Independent technical review at architecture sign off and before go-live. | Advisory, as required |
+| Cheick Ismael Maiga | Technical Advisor, P.Eng. | Advisory. Technical review at architecture sign off and before go-live. Not day-to-day delivery staff and not independent of The Alpha Nova. | Advisory, as required |
 | Dr. Markus Lehmann | Strategic Advisor | Advisory. Enterprise architecture and technology strategy review. | Advisory, as required |
 | Prof. Dr. Steffen Moritz | Lead Scientific Advisor | Advisory. Data presentation and reporting rigour. | Advisory, as required |
 
@@ -463,7 +463,7 @@ Titles are exact. Full resumes are in Appendix A. Allocations are proposed commi
 
 We would rather disclose these than have the City find them.
 
-**Dr. Markus Lehmann** holds an advisory relationship with The Alpha Nova as Strategic Advisor. He is named here as an advisor to this engagement. He is not offered as an independent client reference for this bid, and where his comments appear on our public website they should be read in light of that advisory relationship.
+**Dr. Markus Lehmann** holds an advisory relationship with The Alpha Nova as Strategic Advisor. He is named here as an advisor to this engagement. He is not offered as a client reference.
 
 **Prof. Dr. Steffen Moritz** occupies two roles simultaneously. He is our Lead Scientific Advisor, and he is the University Medical Center Hamburg-Eppendorf client on the COGITO engagement cited in Section 2.2 and offered as a reference in Section 9. The City should weigh that reference knowing he is also an advisor to our company. We are providing him as a reference because he is the person who can actually speak to the COGITO work, and we are disclosing the dual role so the City can discount it as it sees fit.
 
@@ -471,7 +471,7 @@ We would rather disclose these than have the City find them.
 
 ### 8.2 Team continuity
 
-The named individuals are the individuals who deliver. We do not substitute personnel after award without the City's written consent, and any proposed substitute would be of equivalent or greater qualification with resumes provided. Given the four year initial term, our succession position is that no single person holds undocumented knowledge: configuration is held as data, the deployment is documented, and Cheick Ismael Maiga's independent review at architecture sign off exists partly to ensure a second qualified person understands the system.
+The named individuals are the individuals who deliver. We do not substitute personnel after award without the City's written consent, and any proposed substitute would be of equivalent or greater qualification with resumes provided. Given the four year initial term, our succession position is that no single person holds undocumented knowledge: configuration is held as data, the deployment is documented, and Cheick Ismael Maiga's advisory review at architecture sign off exists partly to ensure a second qualified person understands the system.
 
 The Alpha Nova | Economic and Investment Data Portal | COL-26-139
 Confidential | INTERNAL DRAFT | Page 8
@@ -485,7 +485,7 @@ Three live, confirmed contacts. Each one can speak to work our team actually did
 **1. University Medical Center Hamburg-Eppendorf (UKE), COGITO**
 Prof. Dr. Steffen Moritz
 moritz@uke.de, +49 40 7410 56565
-Relevance: multi language application with a clinician facing analytics and reporting surface, strict privacy requirements, deployment across multiple institutions, peer reviewed validation. Speaks to our ability to present data that professionals act on.
+Relevance: multi language application with a clinician facing analytics and reporting surface, strict privacy requirements. **[ATHIF TO CONFIRM: "deployment across multiple institutions" and "peer reviewed validation" before they appear in the submitted reference block.]** Speaks to our ability to present data that professionals act on.
 Disclosure: Prof. Dr. Moritz is also The Alpha Nova's Lead Scientific Advisor. See Section 8.1.
 
 **2. One Chamber System, Chamber Perks**
@@ -678,7 +678,7 @@ Canada
 
 **Profile.** Professional Engineer and Technical Advisor to The Alpha Nova, advising across our engineering engagements and bringing hands on engineering depth and rigour to demanding technical work.
 
-**Role on this engagement.** Advisory, at two defined gates: independent review of the architecture at the end of Phase 1, and a pre go-live review in Phase 4. His involvement also ensures a second qualified engineer understands the deployment, which is a continuity control for a term that may run twelve years.
+**Role on this engagement.** Advisory, at two defined gates: technical review of the architecture at the end of Phase 1, and a pre go-live review in Phase 4. His involvement also ensures a second qualified engineer understands the deployment, which is a continuity control for a term that may run twelve years. He is The Alpha Nova's Technical Advisor, not an independent third-party reviewer.
 
 **[ATHIF TO CONFIRM: province of P.Eng. licensure and whether the City requires evidence of licensure or a permit to practise in Alberta for advisory work of this kind. Do not assert Alberta licensure.]**
 
