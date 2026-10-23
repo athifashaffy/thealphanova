@@ -1,0 +1,30 @@
+{
+  "cycle": 1,
+  "ran_at_utc": "2026-09-04T03:28:28Z",
+  "last_email_at_utc": "2026-09-04T03:28:40Z",
+  "last_email_reason": "loop_start",
+  "last_email_et_date": "2026-09-03",
+  "last_vendor_mail": {
+    "merx": "2026-08-30T11:04:38Z",
+    "bidsandtenders": "2026-08-29T03:25:24Z"
+  },
+  "alerted_deadlines": [
+    "CICIC-questions-2026-09-04-09:00-ET"
+  ],
+  "board": [
+    "High River X070|GO|close 2026-09-08 12:00 MT",
+    "Lethbridge COL-26-139|GO|close 2026-09-10 14:00 MDT",
+    "Yellowknife 26-073|MAYBE|close 2026-09-11 15:00 MDT",
+    "Abbotsford 1220-2026-4120|MAYBE|close 2026-09-21 14:00 PDT",
+    "CICIC 2026-CICIC-01|GO|questions 2026-09-04 09:00 ET",
+    "Saskatoon RFI 26-0470|MAYBE|close 2026-09-18 14:00 CST",
+    "TBDHU 005-2026|MAYBE|close 2026-09-22 14:00 EST",
+    "Lethbridge COL-25-173|MAYBE|close 2026-09-23 14:00 MDT"
+  ],
+  "notes": [
+    "bidsandtenders daily mail quiet since 28 Aug",
+    "nothing submitted"
+  ],
+  "drive_latest_intake": "https://docs.google.com/document/d/1--keERoHALJnR0GCCi-iiAFzBDg3jFz_2UeBwQkOutE/edit",
+  "timer_expires_at": "2026-09-11T03:28:54.906Z"
+}
